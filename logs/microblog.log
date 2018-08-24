@@ -1,0 +1,119 @@
+2018-08-24 22:12:25,357 ERROR: Exception on / [GET] [in /home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/workspace/app/main/routes.py", line 47, in index
+    prev_url=prev_url)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/workspace/app/templates/base.html", line 55, in template
+    <div class="container" style="background-image: "{{ url_for('static', filename='book.png');">">
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/home/ubuntu/workspace/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/workspace/app/templates/base.html", line 55, in template
+    <div class="container" style="background-image: "{{ url_for('static', filename='book.png');">">
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 896, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 878, in subparse
+    rv = self.parse_statement()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 871, in subparse
+    self.stream.expect('variable_end')
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/lexer.py", line 386, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got ';'
+2018-08-24 22:21:11,061 INFO: Microblog startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-08-24 22:21:15,598 ERROR: Exception on / [GET] [in /home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/workspace/app/main/routes.py", line 47, in index
+    prev_url=prev_url)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/workspace/app/templates/base.html", line 55, in template
+    <div class="container" style="background-image: "{{ url_for('static', filename='book.png'); }} width: 100%;
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/home/ubuntu/workspace/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/workspace/app/templates/base.html", line 55, in template
+    <div class="container" style="background-image: "{{ url_for('static', filename='book.png'); }} width: 100%;
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 896, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 878, in subparse
+    rv = self.parse_statement()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/parser.py", line 871, in subparse
+    self.stream.expect('variable_end')
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/lexer.py", line 386, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got ';'
+2018-08-24 22:21:49,723 INFO: Microblog startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-08-24 22:28:45,061 INFO: Microblog startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-08-24 22:31:00,220 INFO: Microblog startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-08-24 22:32:06,630 INFO: Microblog startup [in /home/ubuntu/workspace/app/__init__.py:79]
