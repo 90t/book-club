@@ -3,7 +3,7 @@
 ## sudo pip install virtualenv
 ## virtualenv -p python3 env <<<-----name of virtual enviroments
 ## clivenoonan:~/workspace $ source env/bin/activate
-## $ pip freeze  -r requiremnts.txt
+## $ pip freeze  -r requirements.txt
 ## $ pip install --upgrade -r requirements.txt
 ## (env)clivenoonan:~/workspace $ 
 ## export FLASK_APP=blog.py
@@ -130,7 +130,9 @@
 ## 
 ## 
 ## 
-## heroku 
+###### heroku 
+##
+##
 ## (env) clivenoonan:~/workspace (master) $ heroku apps:create book-of-hue
 ## Creating ⬢ book-of-hue... done
 ## https://book-of-hue.herokuapp.com/ | https://git.heroku.com/book-of-hue.git
@@ -138,17 +140,17 @@
 ##
 ## Example
 ## (env) clivenoonan:~/workspace (master) $ git remote -v
-## heroku  https://git.heroku.com/book-of-hue.git (fetch)
-## heroku  https://git.heroku.com/book-of-hue.git (push)
-## origin  https://github.com/90t/hughies_book_club.git (fetch)
-## origin  https://github.com/90t/hughies_book_club.git (push)
+## heroku  https://git.heroku.com/my-book-of-hue.git (fetch)
+## heroku  https://git.heroku.com/my-book-of-hue.git (push)
+## origin  https://github.com/90t/book-club.git (fetch)
+## origin  https://github.com/90t/book-club.git (push)
 ## 
 ## 
 ## heroku addons:add heroku-postgresql:hobby-dev
 ## Creating heroku-postgresql:hobby-dev on ⬢ book-of-hue... free
 ## Database has been created and is available
 ## 
-## Created postgresql-graceful-71515 as DATABASE_URL
+## Created postgresql-shaped-66481 as DATABASE_URL
 ## 
 ## heroku logs
 ## 
@@ -164,7 +166,7 @@
 ## 
 ## 
 ## SET HEROKU ENVIROMENT VARIBLE
-## heroku config:set FLASk_APP=blog.py
+## heroku config:set FLASK_APP=blog.py
 ## Setting FLASk_APP and restarting ⬢ book-of-hue... done, v5
 ## FLASK_APP: blog.py
 ## 
@@ -176,10 +178,7 @@
 ## [master 9f10d8c] First push to heroku
 ## 
 ## 
-## To https://git.heroku.com/book-of-hue.git
-##  * [new branch]      master -> master
-##
-## https://book-of-hue.herokuapp.com
+## https://my-book-of-hue.herokuapp.com/ | https://git.heroku.com/my-book-of-hue.git
 ##
 ## HEROKU UPDATE WORKFLOW
 ## 
