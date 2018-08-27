@@ -1,6 +1,6 @@
 {% extends 'bootstrap/base.html' %}
 {% block title %}
-    {% if title %}{{ title }} - BLINKER{% else %}{{ _('BLINKER) }}{% endif %}
+    {% if title %}{{ title }} - Blinker{% else %}{{ _('Welcome to Blinker') }}{% endif %}
 {% endblock %}
 
 {% block navbar %}
@@ -14,7 +14,7 @@
                     <span style="color:white;"  class="icon-bar"></span>
                     <span style="color:white;" class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" style="background-color:white; border-color:1px solid silver;" href="{{ url_for('main.index') }}">BLINKER</a>
+                <a class="navbar-brand" style="background-color:white; border-color:1px solid silver;" href="{{ url_for('main.index') }}">Blinker</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
