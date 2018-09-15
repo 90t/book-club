@@ -1,25 +1,24 @@
 {% extends 'bootstrap/base.html' %}
 {% block title %}
-    {% if title %}{{ title }} - Blinker{% else %}{{ _('Welcome to Blinker') }}{% endif %}
+    {% if title %}{{ title }} - CodeNote{% else %}{{ _('Welcome to CodeNote') }}{% endif %}
 {% endblock %}
-
 {% block navbar %}
-    <nav class="navbar" style="background-color:#40b6e6e0;" >
-        <div class="container">
-            <div class="navbar-header"style="#">
-                <button  type="button" class="navbar-toggle collapsed" 
+    <nav class="navbar" style="background-color:black;" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button style="background-color:white"  type="button" class="navbar-toggle collapsed" 
                             data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span style="color:white;" class="sr-only">Toggle navigation</span>
-                    <span style="color:white;" class="icon-bar"></span>
-                    <span style="color:white;"  class="icon-bar"></span>
-                    <span style="color:white;" class="icon-bar"></span>
+                    <span  class="icon-bar"></span>
+                    <span  class="icon-bar"></span>
+                    <span  class="icon-bar"></span>
+                    <span  class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" style="background-color:white; border-color:1px solid silver;" href="{{ url_for('main.index') }}">Blinker</a>
+                <a class="navbar-brand" style="#;" href="{{ url_for('main.index') }}">CodeNote</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a style="color:white;" href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
-                    <li><a style="color:white;" href="{{ url_for('main.explore') }}">{{ _('Blog-Posts') }}</a></li>
+                    <li><a style="color:grey;" href="{{ url_for('main.explore') }}">{{ _('CodeNotes') }}</a></li>
                 </ul>
                 {% if g.search_form %}
                 <form class="navbar-form navbar-left" style="color:white;" method="get" action="{{ url_for('main.search') }}">
@@ -30,7 +29,7 @@
                 {% endif %}
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}
-                    <li><a href="{{ url_for('auth.login') }}"style="color:white;" >{{ _('Login') }}</a></li>
+                    <li><a href="{{ url_for('auth.login') }}"style="color:grey;" >{{ _('Login') }}</a></li>
                     {% else %}
                     <li>
                         <a href="{{ url_for('main.messages') }}" style="color:white;">{{ _('Mail') }}
@@ -42,8 +41,8 @@
                             </span>
                         </a>
                     </li>
-                    <li><a href="{{ url_for('main.user', username=current_user.username) }} "style="color:white;">{{ _('Profile') }}</a></li>
-                    <li><a href="{{ url_for('auth.logout') }}" style="color:white;">{{ _('Logout') }}</a></li>  
+                    <li><a href="{{ url_for('main.user', username=current_user.username) }} "style="color:grey;">{{ _('Profile') }}</a></li>
+                    <li><a href="{{ url_for('auth.logout') }}" style="color:grey;">{{ _('Logout') }}</a></li>  
                     {% endif %}
                 </ul>
             </div>
@@ -52,18 +51,18 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container" style="background-image: url('{{ url_for('static', filename='img/g.jpeg') }}" "height: auto;" "max-width:100%"  "background-repeat: no-repeat;" >
+    <div class="container">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-            <div class="alert alert-info" style="color:skyblue;" role="alert">{{ message }}</div>
+            <div class="alert alert-info" style="color:pink;" role="alert">{{ message }}</div>
             {% endfor %}
         {% endif %}
         {% endwith %}
 
         {# application content needs to be provided in the app_content block #}
         {% block app_content %}{% endblock %}
-    </div style="color:skyblue;">
+    </div>
 {% endblock %}
 
 {% block scripts %}

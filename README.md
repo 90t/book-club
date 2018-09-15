@@ -12,7 +12,7 @@
 ## export FLASK_DEBUG=0 <<-- OFF
 ## python -m smtpd -n -c DebuggingServer localhost:8025
 
-
+##  style="background-image: url('{{ url_for('static', filename='img/g.jpeg') }}" "height: auto;" "max-width:100%"  "background-repeat: no-repeat;"  
 
 
 ###### BookClub
