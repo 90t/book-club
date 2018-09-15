@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/90t/book-club.svg?branch=master)](https://travis-ci.org/90t/book-club)
+
+
 ###### Flask on cloud 9 venv setup python3
 ###### Create blank instance of cloud9 ubuntu
 ## sudo pip install virtualenv
