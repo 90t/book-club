@@ -3,21 +3,21 @@
     {% if title %}{{ title }} - CodeNote{% else %}{{ _('Welcome to CodeNote') }}{% endif %}
 {% endblock %}
 {% block navbar %}
-    <nav class="navbar" style="background-color:black;" >
+    <nav class="navbar" style="background-color:white;">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button style="background-color:white"  type="button" class="navbar-toggle collapsed" 
+                <button style="background-color:grey"  type="button" class="navbar-toggle collapsed" 
                             data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span  class="icon-bar"></span>
                     <span  class="icon-bar"></span>
                     <span  class="icon-bar"></span>
                     <span  class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" style="#;" href="{{ url_for('main.index') }}">CodeNote</a>
+                <a class="navbar-brand" style="color:grey;" href="{{ url_for('main.index') }}">CodeNote</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a style="color:white;" href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
+                    <li><a style="color:grey;" href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
                     <li><a style="color:grey;" href="{{ url_for('main.explore') }}">{{ _('CodeNotes') }}</a></li>
                 </ul>
                 {% if g.search_form %}
@@ -32,7 +32,7 @@
                     <li><a href="{{ url_for('auth.login') }}"style="color:grey;" >{{ _('Login') }}</a></li>
                     {% else %}
                     <li>
-                        <a href="{{ url_for('main.messages') }}" style="color:white;">{{ _('Mail') }}
+                        <a href="{{ url_for('main.messages') }}" style="color:grey;">{{ _('Mail') }}
                             {% set new_messages = current_user.new_messages() %}
                             <span id="message_count" class="badge"
                                   style="color:skyblue;""visibility: {% if new_messages %}visible
@@ -55,7 +55,7 @@
         {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-            <div class="alert alert-info" style="color:pink;" role="alert">{{ message }}</div>
+            <div class="alert alert-info" style="color:skyblue;" role="alert">{{ message }}</div>
             {% endfor %}
         {% endif %}
         {% endwith %}
