@@ -7,31 +7,32 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
-</head>
-{% extends 'bootstrap/base.html' %}
+    {% extends 'bootstrap/base.html' %}
 {% block title %}
     {% if title %}{{ title }} - CodeNote{% else %}{{ _('Welcome to CodeNote') }}{% endif %}
 {% endblock %}
+</head>
+
 {% block navbar %}
     <nav class="navbar" style="background-color:white;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button style="background-color:lightgrey;" "border: 1px solid black;"  type="button" class="navbar-toggle collapsed" 
-                            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" style="color:grey;" "font-size:25px;"  href="{{ url_for('main.index') }}">CodeNote</a>
+                <a class="navbar-brand" style="color:grey;"  href="{{ url_for('main.index') }}">CodeNote</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a style="color:grey;" href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
-                    <li><a style="color:grey;" href="{{ url_for('main.explore') }}">{{ _('CodeNotes') }}</a></li>
+                    <li><a style="color:black;" href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
+                    <li><a style="color:black;" href="{{ url_for('main.explore') }}">{{ _('CodeNotes') }}</a></li>
                 </ul>
                 {% if g.search_form %}
-                <form class="navbar-form navbar-left" style="color:white;" method="get" action="{{ url_for('main.search') }}">
+                <form class="navbar-form navbar-left" style="color:black;" method="get" action="{{ url_for('main.search') }}">
                     <div class="form-group">
                         {{ g.search_form.q(size=20, class='form-control', placeholder=g.search_form.q.label.text) }}
                     </div>
@@ -39,10 +40,10 @@
                 {% endif %}
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}
-                    <li><a href="{{ url_for('auth.login') }}"style="color:grey;" >{{ _('Login') }}</a></li>
+                    <li><a href="{{ url_for('auth.login') }}"style="color:black;" >{{ _('Login') }}</a></li>
                     {% else %}
                     <li>
-                        <a href="{{ url_for('main.messages') }}" style="color:grey;">{{ _('Mail') }}
+                        <a href="{{ url_for('main.messages') }}" style="color:black;">{{ _('Mail') }}
                             {% set new_messages = current_user.new_messages() %}
                             <span id="message_count" class="badge"
                                   style="visibility: {% if new_messages %}visible
@@ -51,8 +52,8 @@
                             </span>
                         </a>
                     </li>
-                    <li><a href="{{ url_for('main.user', username=current_user.username) }} "style="color:grey;">{{ _('Profile') }}</a></li>
-                    <li><a href="{{ url_for('auth.logout') }}" style="color:grey;">{{ _('Logout') }}</a></li>  
+                    <li><a href="{{ url_for('main.user', username=current_user.username) }} "style="color:black;">{{ _('Profile') }}</a></li>
+                    <li><a href="{{ url_for('auth.logout') }}" style="color:black;">{{ _('Logout') }}</a></li>  
                     {% endif %}
                 </ul>
             </div>
