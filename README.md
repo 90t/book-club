@@ -1,75 +1,136 @@
 [![Build Status](https://travis-ci.org/90t/book-club.svg?branch=master)](https://travis-ci.org/90t/book-club)
 
+
 # CodeNote flasks micro services
 
-One or two paragraphs providing an overview of your project.
+The inspiration for this project came from studying python since 2016 before I attended IT & Maintenance in CoCC , this python class was of a night time in CoCC,
+- Since then moving on to SoloLearn on my phone ,then Code institute with SoloLearn agian & then syllabus1_LMS1 & syllabus2_LMS2(cloud9)
+- At this stage I was really looking forward to building something real in web development with the flask framework I had heard so much about
+- Flasks Micro services was what I was really interested in , I was setting out to incorporate & learn microservices to speed up, improve, & build a website
+- that could match the mern stack , the mean stack, django , this however is a long term goal as I am very pleased on how far I was able to push the development of this website
+- I wanted to see if I could develop a messaging system without having to leave the flask eco system
+- I also wanted to explore Flask-SQLAlchemy, the orm which allows a dev to programme a database
+- Another key driver behind this project was idea of building a fullstack application with flask & cloud9, this was of course a challenge
 
-Essentially, this part is your sales pitch.
- 
+
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+The style of this website is very minimil, with a small bit of inline styling, this was down to the fact I wanted to focus on fuctionalty
+- The nav bar is white to match the rest of the page , this is my attempt to bring the website together, with the hover of the links coming from
+- the defualt styles from FlaskBootStrap, I also restyled the color of the navbar links , this had a massive effect on such a plain interface
+- Changing the mail notification icon was also a massive changer in the over all aesthetics of my application
+- When arriving on CodeNote you will be met with a sign in page where the user has the option of signing into the application
+- or registering a new account, the user also has the option of email recovery & a remember me checkbox, since this is the first page the user will see,
+- Once the user has logged in, the user will be greeted with a message with there user name that they had just signed with
+- The main CodeNote/posts/forum/ page is accessible through the navbar with the link CodeNote,
+- The users mail, logout , profile , & search engine are also availible on this page  
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+- Once on this page the user has the abitly to go home to his own posts/notes page or the user can go staright to his profile page or straight to his own mail page, 
+- This page the main page , is also the page with all the users ,here the user can select another user & view there profile
+- When hovering over a user name a popup box will appear with details about the user such as There user name , there most recent Post/CodeNote, & 
+- the last time there were seen aswell as the date & year
+- Also in this pop up box users can observe how many followers a user has & how many there are following
+- The pop up box is also interactive, a user can select a user name & be transported to there profile page or a users profile page 
+- They can also follow or unfollow a user by accessing there profile page , but the user can not follow themselves
+- The users profile page is also the page where other coders/users can private message another coder/user
+- 
+- The home page is the page where users can leave a Note/Post & then this Note/Post will show up on the CodeNotes page,
+- 
+- This application can come in very handy indeed , if 2 developers were working on a project , they could very easliy communicate with one another through the use of the mailing system 
+- with little to no distraction
+- More devs on the note page or more team members could also join in & solve problems about there code & advise on going forward
+- Where this application also would come in very handy is in a small business, or family business,
+- This would give the all the team members access the communication to one another completly free of charge
+- where this application can also be used is in a in house restaurnat communacation system
+ 
+
+
+
+###### Flask on cloud 9 venv setup python3
+- The setup for this project was similer Django but with slight variations 
+- First I created a blank instance with an ubuntu server on cloud 9
+- Then I ran the command sudo pip install virtualenv, this installed the virtualenv that comes bundled with the ubuntu server
+- Next I created my venv with virtualenv -p python3 env <<<-----name of virtual enviroment
+- My next task was to activate the virtualenv with  clivenoonan:~/workspace $ source env/bin/activate
+- Since I had the majority of my project already built on a different ubuntu cloud workspace server, I copy & pasted my requirements.txt file into my new project
+- Next I ran the command pip freeze  -r requirements.txt
+- Also pip install --upgrade -r requirements.txt, this updated & synced my packages to my project folder
+- Finally I started my development folder, with the command env/bin/flask run --host=0.0.0.0 --port=8080
+- After settting my env vars in heroku , when evr I neede to workon my project after I set the vars , I would have to run export FLASK_APP=blog.py
+- If I wanted to workon my project with debug mode on I would run the command  export FLASK_DEBUG=1 <<---ON
+- To turn debug off for deployment I would run the command export FLASK_DEBUG=0 <<-- OFF
+- To run my local debug built in email server I would run the command python -m smtpd -n -c DebuggingServer localhost:8025 in a new terminal, with my bash terminal also running
+
+
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+### Web Forms
+- 
+### Database
+
+### User Logins
+
+### Profile Page and Avatars
+
+### Followers
+
+### Pagination
+
+### Email Support
+
+### Ajax
+
+### Full-Text Search
+
+### JavaScript
+
+### Notifications
  
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
 
 - Another feature idea
-- 
 
 
-
+sET ENVIROMENT VARIBLE
+## heroku config:set LOG_TO_STDOUT=1
+## Created postgresql-graceful-71515 as DATABASE_URL
+## 
+## 
+## Compile Languages
+## 
+## 
+## 
+## 
+## SET HEROKU ENVIROMENT VARIBLE
+## heroku config:set FLASK_APP=blog.py
+## Setting FLASk_APP and restarting ⬢ book-of-hue... done, v5
+## FLASK_APP: blog.py
+## 
+## 
+## PUSH TO HEROKU WORKFLOW
+## no changes added to commit (use "git add" and/or "git commit -a")
+## (env) clivenoonan:~/workspace (master) $ git add .
+## (env) clivenoonan:~/workspace (master) $ git commit -m "First push to heroku"
+## [master 9f10d8c] First push to heroku
+## 
+## 
+## https://my-book-of-hue.herokuapp.com/ | https://git.heroku.com/my-book-of-hue.git
+##
+## HEROKU UPDATE WORKFLOW
+## 
+## 
+## heroku login
+## 
+## git add .
+##
+## git commit -m ""
+##
+## git push heroku master
+##
 - 
-## Micro Services
-
-- [FlaskBootStrap](https://https://getbootstrap.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library
--,aswell as reusable components
-
-- [Flask-Babel](https://https://https://www.w3schools.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library
-- 
-- [Flask-Login](https://https://getbootstrap.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library
-- 
-- [Flask-Mail](https://https://getbootstrap.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library
-- 
-- [Flask-Moment](https://https://getbootstrap.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library
-- 
-- [Flask-SQLAlchemy](https://https://getbootstrap.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library
-- 
-- [Flask-WTF](https://https://getbootstrap.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library
-- 
-- [guess-language-spirit](https://https://getbootstrap.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library
-- 
-- [SQLAlchemy](https://https://getbootstrap.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library
-- 
-- [WTForms](https://https://getbootstrap.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library
-
-- 
-
 
 
 - 
@@ -111,6 +172,37 @@ In addition, you may also use this section to discuss plans for additional featu
 - [jigsaw.w3](https://jigsaw.w3g/)
     - The project uses **jigsaw.w3** to test validation of CSS3
     -also to test seo data & accessibility & best practices
+
+## Micro Services
+
+- [FlaskBootStrap](https://https://getbootstrap.com/)
+- The project uses **BootStrap4** to assist the Developer with a built in css library79376504
+- aswell as reusable components
+
+- [Flask-Babel](https://https://https://www.w3schools.com/)
+- I used flask babel to add support for date & time formatting
+- 
+- [Flask-Login](https://https://getbootstrap.com/)
+- I used Flask-Login for user session management which  handeled my authentication system
+- 
+- [Flask-Mail](https://https://getbootstrap.com/)
+- I used Flask-Mail to provide a simple interface to set up SMTP with your Flask application
+- and to send messages from my views from inside my flask application
+- 
+- [Flask-Moment](https://https://getbootstrap.com/)
+- I used Flask-Moment Formatting of dates and times in Flask templates using moment.js.
+- 
+- [Flask-SQLAlchemy](https://https://getbootstrap.com/)
+- I used Flask-SQLAlchemy as my ORM manager to work with my database
+- 
+- [Flask-WTF](https://https://getbootstrap.com/)
+- I used Flask-WTF to work with my forms
+- 
+- [guess-language-spirit](https://https://getbootstrap.com/)
+- The project uses **BootStrap4** to assist the Developer with a built in css library
+- 
+- [WTForms](https://https://getbootstrap.com/)
+- I used WTForms to validate my forms
 
 
 
@@ -200,9 +292,14 @@ For any scenarios that have not been automated, test the user stories manually a
     3. Try to submit the form with an invalid email address and verify that a relevant error message appears
     4. Try to submit the form with all inputs valid and verify that a success message appears.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+## My Application looks amazingly responsive across al screnn sizes this is maonly down to the flask framework & FlaskBootStrap 
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
+## Bugs
+
+### Email
+### Translations
+### Notifications
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
@@ -332,19 +429,7 @@ If this section grows too long, you may want to split it off into a separate fil
 
 
 
-###### Flask on cloud 9 venv setup python3
-###### Create blank instance of cloud9 ubuntu
-## sudo pip install virtualenv
-## virtualenv -p python3 env <<<-----name of virtual enviroments
-## clivenoonan:~/workspace $ source env/bin/activate
-## $ pip freeze  -r requirements.txt
-## $ pip install --upgrade -r requirements.txt
-## (env)clivenoonan:~/workspace $ 
-## export FLASK_APP=blog.py
-## env/bin/flask run --host=0.0.0.0 --port=8080
-## export FLASK_DEBUG=1 <<---ON
-## export FLASK_DEBUG=0 <<-- OFF
-## python -m smtpd -n -c DebuggingServer localhost:8025
+
 
 ##  style="background-image: url('{{ url_for('static', filename='img/g.jpeg') }}" "height: auto;" "max-width:100%"  "background-repeat: no-repeat;"  
 
@@ -451,7 +536,7 @@ If this section grows too long, you may want to split it off into a separate fil
 ## 
 ## 
 ## 
-## export MS_TRANSLATOR_KEY="api key from azure go,s here without the qoutes" in the cli while sister cli server is runnings
+## export MS_TRANSLATOR_KEY="api key from azure go,s here without the qoutes" in the cli while sister cli server is running
 ##
 ## import requests
 ## r = requests.get('https://api.microsofttranslator.com/v2/Ajax.svc/Translate?text= 
@@ -489,42 +574,7 @@ If this section grows too long, you may want to split it off into a separate fil
 ## heroku logs
 ## 
 ## 
-## sET ENVIROMENT VARIBLE
-## heroku config:set LOG_TO_STDOUT=1
-## Created postgresql-graceful-71515 as DATABASE_URL
 ## 
-## 
-## Compile Languages
-## 
-## 
-## 
-## 
-## SET HEROKU ENVIROMENT VARIBLE
-## heroku config:set FLASK_APP=blog.py
-## Setting FLASk_APP and restarting ⬢ book-of-hue... done, v5
-## FLASK_APP: blog.py
-## 
-## 
-## PUSH TO HEROKU WORKFLOW
-## no changes added to commit (use "git add" and/or "git commit -a")
-## (env) clivenoonan:~/workspace (master) $ git add .
-## (env) clivenoonan:~/workspace (master) $ git commit -m "First push to heroku"
-## [master 9f10d8c] First push to heroku
-## 
-## 
-## https://my-book-of-hue.herokuapp.com/ | https://git.heroku.com/my-book-of-hue.git
-##
-## HEROKU UPDATE WORKFLOW
-## 
-## 
-## heroku login
-## 
-## git add .
-##
-## git commit -m ""
-##
-## git push heroku master
-##
 ##
 ##
 ##<nav class="navbar" style="color:grey;">
@@ -569,6 +619,11 @@ If this section grows too long, you may want to split it off into a separate fil
 ##
 ##
 ##
+
+
+
+
+
 
 
 
