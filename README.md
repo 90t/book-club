@@ -43,7 +43,7 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - More devs on the note page or more team members could also join in & solve problems about there code & advise on going forward
 - Where this application also would come in very handy is in a small business, or family business,
 - This would give the all the team members access the communication to one another completly free of charge
-- where this application can also be used is in a in house restaurnat communacation system
+- where this application can also be used is in a in house restaurnat communication system
  
 
 
@@ -61,7 +61,8 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - After settting my env vars in heroku , when evr I neede to workon my project after I set the vars , I would have to run export FLASK_APP=blog.py
 - If I wanted to workon my project with debug mode on I would run the command  export FLASK_DEBUG=1 <<---ON
 - To turn debug off for deployment I would run the command export FLASK_DEBUG=0 <<-- OFF
-- To run my local debug built in email server I would run the command python -m smtpd -n -c DebuggingServer localhost:8025 in a new terminal, with my bash terminal also running
+- To run my local debug built in email server I would run the command python -m smtpd -n -c DebuggingServer localhost:8025 in a new terminal, with my bash
+- terminal also running
 
 
 
@@ -72,6 +73,22 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - blueprint structure , for large aplliactions, even tho this is only a meduim to a small appllication, blueprints had a masssive effect on the organisation
 - of my project
 - In Order to acheieve this I needed 
+
+## Enviroment Variables
+- In Order to automate my env vars I configured a .env file , this technique is used by many frameworks such node.js, Django
+- I also needed to install the install the dot.env with the pip package manager with the command pip install python-dotenv
+- To connect my python package with the alias of dot.env in my config.py file I created this alias in my config class
+- Next I needed to craete my.env file this is where I stored my SECRET_KEY, MAIL_SERVER, MAIL_PORT, MS_TRANSLATOR_KEY, variables
+- while my aplication was running I saved my .env file , this process imports my varibles from me to my appliaction
+
+
+## The Requirements.txt file
+- To keep my packages up to date & in sync with my 3 repos GitHub/Heroku/Local
+- I adopted the requirements.txt techniuqe , I updated & synced my poackge requirments with the pip package manager with the command pip install
+- pip freeze > requirements.txt this essentially dumped all my projects dependencies to my requirements.txt, Heroku will heavily depend on this file in the
+- deployment stages of my project
+- When future up dates to my project are nessacary , I can then reproduce my project with just my requirements.txt file , aswell another developer
+
 
 ### Web Forms & Flask-WTF
 - To work & set up my forms I had to have venv activated & I had intitiatd the project with my FLASK_APP=blog.py
@@ -163,6 +180,7 @@ The style of this website is very minimil, with a small bit of inline styling, t
 font-family: "Source Sans Pro",Helvetica,sans-serif
 
     color: #666;
+    style="color:#666;" "font-family: "Source Sans Pro",Helvetica,sans-serif;"
 
 
 sET ENVIROMENT VARIBLE
@@ -646,7 +664,7 @@ For any scenarios that have not been automated, test the user stories manually a
 ## 
 ##
 ##
-##<nav class="navbar" style="color:grey;">
+##<nav class="navbar" style="color:#666;" "font-family: "Source Sans Pro",Helvetica,sans-serif;">
 ##
 
 ## 
