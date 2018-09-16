@@ -72,7 +72,9 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - blueprints are a brillant feature to the flask framework, a good example of this is this project , I fully indented to build my project with a
 - blueprint structure , for large aplliactions, even tho this is only a meduim to a small appllication, blueprints had a masssive effect on the organisation
 - of my project
-- In Order to acheieve this I needed 
+- In Order to acheieve this I created a main / auth/ errors BluePrints inside of my app folder
+- I then registered my BluePrints in my __init__ package files
+- This is similer to Django each BluePrint is like there own app 
 
 ## Enviroment Variables
 - In Order to automate my env vars I configured a .env file , this technique is used by many frameworks such node.js, Django
@@ -133,17 +135,20 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - I also used flask shell , this eliminated the need to import my instance into my python shell everytime I wanted too manage my database I entered this
 - flask shell with the command flask shell
 
+### End Of Database & Migrations 
 
 
-### User Logins
+
+### User Logins & Avatars 
 - I built my user subsystem with password hashing , by storing them in password hashs
 
+### Followers & Error Handling
 
-### Followers
+### Ajax Magic
 
+### Moment.js
 
-
-### Email Support
+### Email Support , Dates & Times & Flask-Babel 
 
 ### Full-Text Search
 
@@ -166,11 +171,8 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - when jquery finds the element the css method is applied by changing the visisbilty of the badge to visible when there is a message &
 - not viisble when there is !not a message
 - Next was to create my notification models , I used the payload_json for this operation
-- beacause of this addition I also added a new model field to my main models.py to reflect my changes
+- because of this addition I also added a new model field to my main models.py to reflect my changes
 
-- 
-
- ### Ajax
  
 
 ### Features Left to Implement
@@ -400,9 +402,12 @@ For any scenarios that have not been automated, test the user stories manually a
 - With my new app created I recieved my new heroku git address/url 
 - I clarafied my new remote address with the command git remote -v 
 - To clarafay my app creation I checked my heroku cloud managment console once satisfied I proceeded 
-- Herokus ephemeral file system dictates that the file storage is not permanant, because of this I used the technuigue of provisioning a postgres database on my heroku platform
-- I achieved this with the HerokuCLI by running the command heroku addons:add heroku-postgresql:hobby-dev , this gives me the free thier , the excate same as creating from the heroku cloud managment console
-- this task attached a database url connection & set the env varaiable to DATABASE_URL , this url acts as a pointer when I deploy my application to my new postgres database
+- Herokus ephemeral file system dictates that the file storage is not permanant, because of this I used the technuigue of provisioning a postgres database on my
+- heroku platform
+- I achieved this with the HerokuCLI by running the command heroku addons:add heroku-postgresql:hobby-dev , this gives me the free thier , the excate same as
+- creating from the heroku cloud managment console
+- this task attached a database url connection & set the env varaiable to DATABASE_URL , this url acts as a pointer when I deploy my application to my new
+- postgres database
 
 ## Deployment Stage2
 
@@ -425,12 +430,7 @@ For any scenarios that have not been automated, test the user stories manually a
 - Finally I ran the command Git push heroku master to sync my Heroku repo
 - 
 ## My Live Practical Python Project CodeNote can be viewed fully deployed on heroku [here](http://my-book-of-hue.herokuapp.com/)
-- 
 
-- 
-
-
-- 
 ## VERSION CONTROL
 
 - The  project folder lives at this address
@@ -452,116 +452,10 @@ For any scenarios that have not been automated, test the user stories manually a
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##  style="background-image: url('{{ url_for('static', filename='img/g.jpeg') }}" "height: auto;" "max-width:100%"  "background-repeat: no-repeat;"  
 
 
-###### BookClub
-## test222@gmail.com
-## Username:
-## Al
-## Password:
-## mynewflask2236vg
 
-## test22522@gmail.com
-## Username:
-## Joey
-## Password:
-## mynewflask2236jko0vghh7dfhg
-
-###### BookClub
-## t@gmail.com
-## Username:
-## Jarvis
-## Password:
-## mynewflask2236vg
-
-## Jarvisui@gmail.com
-## Username:
-## Jarvisui
-## Password:
-## mynewflask2236dfg
-
-
-### Migrate Workflow
-## git add .
-## git commit -m "Trying to flush out posts problem"
-## git push origin master
-## flask db migrate
-## flask db upgrade 
-##
-##
-##
-## Created App Package Module
-##
-##
-##
-## Created Routes to the app package
 ## 
 ## Created FLASK_APP variable in the cli
 ## Set envirion variable
