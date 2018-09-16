@@ -1,0 +1,28 @@
+body{
+  background: white /* fallback for old browsers */
+  
+}
+.greeting {
+    color: grey;
+}
+.btn_small {
+    background-color: transparent;
+    color: black;
+    height: 24px;
+    width: 60px;
+    line-height: 24px;
+    margin: 5px 5px;
+    padding: 0 0.5em;
+}
+
+.task_header {
+    margin-top: 5px;
+}
+
+#navone{
+    color: #fff;
+    background-color: transparent;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}

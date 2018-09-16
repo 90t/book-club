@@ -1,7 +1,7 @@
-<table class="table table-hover" style="color:#666;" "font-family: Source Sans Pro ,Helvetica,sans-serif;">
+<table class="table table-hover" style="color:blue;" "font-family: Source Sans Pro ,Helvetica,sans-serif;">
         <tr>
             <td width="200px">
-                <a href="{{ url_for('main.user', username=post.author.username) }}">
+                <a class="greeting" href="{{ url_for('main.user', username=post.author.username) }}">
                     <img src="{{ post.author.avatar(70) }}" />
                 </a>
             </td>
