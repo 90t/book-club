@@ -68,6 +68,10 @@ The style of this website is very minimil, with a small bit of inline styling, t
 ## Features
 
 ## BluePrints 
+- blueprints are a brillant feature to the flask framework, a good example of this is this project , I fully indented to build my project with a
+- blueprint structure , for large aplliactions, even tho this is only a meduim to a small appllication, blueprints had a masssive effect on the organisation
+- of my project
+- In Order to acheieve this I needed 
 
 ### Web Forms & Flask-WTF
 - To work & set up my forms I had to have venv activated & I had intitiatd the project with my FLASK_APP=blog.py
@@ -337,13 +341,18 @@ falsh
 Was User3 able to create an account when he filled in his details correctly?
 True
 RESULT 100%
+
+## Bugs
+
+### Email
+### Translations
+### Notifications
+
+## Please edit configuration/connection/logging settings in '/home/ubuntu/workspace/migrations/alembic.ini'
+
+If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
  
-
-# This Full Stack Framework Falsk App  pplication looks & responses very very well across all screen sizes 
-
-# There is one problem with my application & it is a subscription I have been locked out of my mail gun because I mistakenly pushed an api key , after removing the api key from GitHub I proceeded to contact mailgun,There I followwed the support team I correcting all the details of my account , where I set up 2step verification using the Google Auth App  but now I am totally locked out of my account.
-I tried to signup for another account but they only except 1 mobile number & 1 credit card number My Project is ready & setup for email intergration as soon as mailgun unlocks my account, I am presently in contact with Mailgun, 
-
 
 ## Testing
 
@@ -362,15 +371,6 @@ For any scenarios that have not been automated, test the user stories manually a
 ## My Application looks amazingly responsive across al screnn sizes this is maonly down to the flask framework & FlaskBootStrap 
 
 
-## Bugs
-
-### Email
-### Translations
-### Notifications
-
-## Please edit configuration/connection/logging settings in '/home/ubuntu/workspace/migrations/alembic.ini'
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
 
