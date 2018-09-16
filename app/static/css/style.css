@@ -1,10 +1,8 @@
 body{
-  background: white /* fallback for old browsers */
+  background: white /* fallback for   old browsers */
   
 }
-.greeting {
-    color: grey;
-}
+
 .btn_small {
     background-color: transparent;
     color: black;
@@ -13,6 +11,12 @@ body{
     line-height: 24px;
     margin: 5px 5px;
     padding: 0 0.5em;
+}
+
+.btn-default {
+    color: #4e4c4c;
+    background-color: #fff;
+    border-color: #ccc;
 }
 
 .task_header {
