@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/90t/book-club.svg?branch=master)](https://travis-ci.org/90t/book-club)
 
-
 # CodeNote flasks micro services
 
 The inspiration for this project came from studying python since 2016 before I attended IT & Maintenance in CoCC , this python class was of a night time in CoCC,
@@ -26,7 +25,8 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - The users mail, logout , profile , & search engine are also availible on this page  
 
 
-- Once on this page the user has the abitly to go home to his own posts/notes page or the user can go staright to his profile page or straight to his own mail page, 
+- Once on this page the user has the abitly to go home to his own posts/notes page or the user can go staright to his profile page or
+- straight to his own mail page, 
 - This page the main page , is also the page with all the users ,here the user can select another user & view there profile
 - When hovering over a user name a popup box will appear with details about the user such as There user name , there most recent Post/CodeNote, & 
 - the last time there were seen aswell as the date & year
@@ -35,9 +35,10 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - They can also follow or unfollow a user by accessing there profile page , but the user can not follow themselves
 - The users profile page is also the page where other coders/users can private message another coder/user
 - 
-- The home page is the page where users can leave a Note/Post & then this Note/Post will show up on the CodeNotes page,
+- The home page is the page where users can leave a Note/Post & then this Note/Post will show up on the CodeNotes page, & there own home page
 - 
-- This application can come in very handy indeed , if 2 developers were working on a project , they could very easliy communicate with one another through the use of the mailing system 
+- This application can come in very handy indeed , if 2 developers were working on a project ,
+- they could very easliy communicate with one another through the use of the mailing system 
 - with little to no distraction
 - More devs on the note page or more team members could also join in & solve problems about there code & advise on going forward
 - Where this application also would come in very handy is in a small business, or family business,
@@ -66,32 +67,98 @@ The style of this website is very minimil, with a small bit of inline styling, t
 
 ## Features
 
-### Web Forms
-- 
-### Database
+## BluePrints 
+
+### Web Forms & Flask-WTF
+- To work & set up my forms I had to have venv activated & I had intitiatd the project with my FLASK_APP=blog.py
+- & ran my server 
+- this was the only I could get cloud 9 to run the server
+- A core component of my application is webforms, I accomplished this with Falsk web forms & the Flask-WTF exstention package which I installed with pip
+- the python package manager, while my venv was active with the command pip inatll flask-wtf
+
+
+### Database & Migrations 
+
+- To create my database I used the python eco system to my advantage
+- I used SQLAlchemy, I again installed this database python package with the pip package manager
+- SQLAlchemy is a ORM  a object relational mapper, this package will act as the client to work with my python code 
+- I needed another package to migrate my database during production, I needed a database migration framework
+- for this I installed flask migrate with the pip package manager
+- SQLAlchemy is not a database it is a mapper , so I also needed a database, for this task I chose sqlite for the devlopment database
+- To create my database with SQLAlchemy I needed to configer my project to my os base line under system in my config.py 
+- I then needed to create my models
+- This led me to my migration workflow, to migrate my database during production of my project I needed to create a database repository
+- to update my schema 
+- To work with my database I needed to initiiaise my repository with the command flask db init
+- This created an automatic migration folder into my project on cloud9 
+- to create my first migration I used to command flask db migrate -m "just like git commit messsage ", just like git a message can be included in your migration
+- for the changes in my project models to take effect to my database, I needed to run a upgrade command,
+- flask db upgrade became a part of my migration workflow, this command automatically generated a sqlite.db database in my project,
+- I then worked with the commands 
+
+#### Migrate Workflow
+## git add .
+## git commit -m "Trying to flush out posts problem"
+## git push origin master
+## flask db migrate
+## flask db upgrade
+## flask db downgrade
+## flask db current 
+## flask db history 
+
+- to manage & observe my database
+- to populate my tables in my database I worked in the python interactive shell , I enterd this shell with the command
+- python
+- I also used flask shell , this eliminated the need to import my instance into my python shell everytime I wanted too manage my database I entered this
+- flask shell with the command flask shell
+
+
 
 ### User Logins
+- I built my user subsystem with password hashing , by storing them in password hashs
 
-### Profile Page and Avatars
 
 ### Followers
 
-### Pagination
+
 
 ### Email Support
 
-### Ajax
-
 ### Full-Text Search
 
-### JavaScript
+### Notifications & Messages
+- The notifications & messages feature was one of the main 2 features I wanted to implement in this project,
+- This was down to there dynamic nature
+- I also wanted to discover how to achieve this while staying inside the flask eco system
+- My first task was to add a new model in my projects models.py file to create the database tables which inturn would work with my messaging system
+- I also updated my user models model class 
+- Next was my forms.py
+- Next up was my routes.py , I created a new route that would accept & recieve messages using the GET & POST method
+- I aslo created my jinja if statements in my user templates, to reflect if a user is viewing a profile that is not there own they will see the send private
+- link , if there are on there own profile they will !not see the send private message link
+- I also updated my templates to reflect my messaging system with html messaging templates
+- I then added a new message method in my route.py 
+- In order to have emphasis on the mail link in my navbar which is present on all pages, aswell as the drop down on mobile navigation
+- I needed to include my my jinja if statements in my base.html to define that if the message count is 0 there is nothing dispalyed
+- My mail badge will appear only when there is unread message 
+- In order to make my badge more dynamic I need to use js by using a jquery fuction that searches for an element that repesents the badge
+- when jquery finds the element the css method is applied by changing the visisbilty of the badge to visible when there is a message &
+- not viisble when there is !not a message
+- Next was to create my notification models , I used the payload_json for this operation
+- beacause of this addition I also added a new model field to my main models.py to reflect my changes
 
-### Notifications
+- 
+
+ ### Ajax
  
 
 ### Features Left to Implement
 
 - Another feature idea
+
+font-family: "Source Sans Pro",Helvetica,sans-serif
+
+    color: #666;
 
 
 sET ENVIROMENT VARIBLE
@@ -272,7 +339,7 @@ True
 RESULT 100%
  
 
-# This Full Stack Framework eCommecre application looks & responses very very well across all screen sizes 
+# This Full Stack Framework Falsk App  pplication looks & responses very very well across all screen sizes 
 
 # There is one problem with my application & it is a subscription I have been locked out of my mail gun because I mistakenly pushed an api key , after removing the api key from GitHub I proceeded to contact mailgun,There I followwed the support team I correcting all the details of my account , where I set up 2step verification using the Google Auth App  but now I am totally locked out of my account.
 I tried to signup for another account but they only except 1 mobile number & 1 credit card number My Project is ready & setup for email intergration as soon as mailgun unlocks my account, I am presently in contact with Mailgun, 
@@ -300,6 +367,8 @@ For any scenarios that have not been automated, test the user stories manually a
 ### Email
 ### Translations
 ### Notifications
+
+## Please edit configuration/connection/logging settings in '/home/ubuntu/workspace/migrations/alembic.ini'
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
@@ -619,11 +688,6 @@ If this section grows too long, you may want to split it off into a separate fil
 ##
 ##
 ##
-
-
-
-
-
 
 
 
