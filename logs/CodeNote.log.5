@@ -1,4 +1,4 @@
-2018-09-16 22:34:34,220 ERROR: Exception on /index [GET] [in /home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py:1560]
+2018-09-16 22:15:38,903 ERROR: Exception on /explore [GET] [in /home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,7 +14,7 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask_login/utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ubuntu/workspace/app/main/routes.py", line 47, in index
+  File "/home/ubuntu/workspace/app/main/routes.py", line 62, in explore
     prev_url=prev_url)
   File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/templating.py", line 134, in render_template
     context, ctx.app)

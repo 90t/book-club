@@ -1,4 +1,42 @@
-2018-09-16 22:34:58,321 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
-2018-09-16 22:36:16,470 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
-2018-09-16 22:43:01,015 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
-2018-09-16 22:45:23,208 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-09-17 10:48:31,073 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-09-17 10:48:36,646 ERROR: Exception on / [GET] [in /home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/workspace/app/main/routes.py", line 47, in index
+    prev_url=prev_url)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/workspace/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ubuntu/workspace/app/templates/base.html", line 10, in top-level template code
+    {% extends 'bootstrap_cdn/base.html' %}
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/workspace/env/lib/python3.4/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap_cdn/base.html
+2018-09-17 10:59:50,969 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-09-17 11:01:21,162 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-09-17 11:03:26,738 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-09-17 11:49:25,086 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
