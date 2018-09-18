@@ -6,8 +6,12 @@ The inspiration for this project came from studying python since 2016 before I a
 - Since then moving on to SoloLearn on my phone ,then Code institute with SoloLearn agian & then syllabus1_LMS1 & syllabus2_LMS2(cloud9)
 - At this stage I was really looking forward to building something real in web development with the flask framework I had heard so much about
 - Flasks Micro services was what I was really interested in , I was setting out to incorporate & learn microservices to speed up, improve, & build a website
-- that could match the mern stack , the mean stack, django , this however is a long term goal as I am very pleased on how far I was able to push the development of this website
+- that could match the mern stack , the mean stack, django , this how ever is a long term goal as I am very pleased on how far I was able to push the development
+- of this website
 - I wanted to see if I could develop a messaging system without having to leave the flask eco system
+- Creating Database for users & Post & followers with SQLACHemy
+- A driver behind the conception of this project was one to one , many to many, many to one, one to none, database relationsips
+- For this task I would need a database, this was a key feature that I needed to explore & my application would depend on it 
 - I also wanted to explore Flask-SQLAlchemy, the orm which allows a dev to programme a database
 - Another key driver behind this project was idea of building a fullstack application with flask & cloud9, this was of course a challenge
 
@@ -25,7 +29,7 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - The users mail, logout , profile , & search engine are also availible on this page  
 
 
-- Once on this page the user has the abitly to go home to his own posts/notes page or the user can go staright to his profile page or
+Once on this page the user has the abitly to go home to his own posts/notes page or the user can go staright to his profile page or
 - straight to his own mail page, 
 - This page the main page , is also the page with all the users ,here the user can select another user & view there profile
 - When hovering over a user name a popup box will appear with details about the user such as There user name , there most recent Post/CodeNote, & 
@@ -49,7 +53,8 @@ The style of this website is very minimil, with a small bit of inline styling, t
 
 
 ###### Flask on cloud 9 venv setup python3
-- The setup for this project was similer Django but with slight variations 
+
+The setup for this project was similer Django but with slight variations 
 - First I created a blank instance with an ubuntu server on cloud 9
 - Then I ran the command sudo pip install virtualenv, this installed the virtualenv that comes bundled with the ubuntu server
 - Next I created my venv with virtualenv -p python3 env <<<-----name of virtual enviroment
@@ -70,23 +75,23 @@ The style of this website is very minimil, with a small bit of inline styling, t
 
 ## BluePrints 
 - blueprints are a brillant feature to the flask framework, a good example of this is this project , I fully indented to build my project with a
-- blueprint structure , for large aplliactions, even tho this is only a meduim to a small appllication, blueprints had a masssive effect on the organisation
+- blueprint structure , for large apllications, even tho this is only a meduim to a small appllication, blueprints had a massive effect on the organisation
 - of my project
 - In Order to acheieve this I created a main / auth/ errors BluePrints inside of my app folder
-- I then registered my BluePrints in my __init__ package files
+- I then registered my BluePrints in my __init package files
 - This is similer to Django each BluePrint is like there own app 
 
 ## Enviroment Variables
 - In Order to automate my env vars I configured a .env file , this technique is used by many frameworks such node.js, Django
-- I also needed to install the install the dot.env with the pip package manager with the command pip install python-dotenv
+- I also needed to install the dot.env exstention with the pip package manager with the command pip install python-dotenv
 - To connect my python package with the alias of dot.env in my config.py file I created this alias in my config class
-- Next I needed to craete my.env file this is where I stored my SECRET_KEY, MAIL_SERVER, MAIL_PORT, MS_TRANSLATOR_KEY, variables
-- while my aplication was running I saved my .env file , this process imports my varibles from me to my appliaction
+- Next I needed to create my.env file this is where I stored my SECRET_KEY, MAIL_SERVER, MAIL_PORT, MS_TRANSLATOR_KEY, variables
+- while my application was running I saved my .env file , this process imports my varibles from me to my appliaction
 
 
 ## The Requirements.txt file
 - To keep my packages up to date & in sync with my 3 repos GitHub/Heroku/Local
-- I adopted the requirements.txt techniuqe , I updated & synced my poackge requirments with the pip package manager with the command pip install
+- I adopted the requirements.txt techniuqe , I updated & synced my package requirments with the pip package manager with the command pip install
 - pip freeze > requirements.txt this essentially dumped all my projects dependencies to my requirements.txt, Heroku will heavily depend on this file in the
 - deployment stages of my project
 - When future up dates to my project are nessacary , I can then reproduce my project with just my requirements.txt file , aswell another developer
@@ -98,6 +103,24 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - this was the only I could get cloud 9 to run the server
 - A core component of my application is webforms, I accomplished this with Falsk web forms & the Flask-WTF exstention package which I installed with pip
 - the python package manager, while my venv was active with the command pip inatll flask-wtf
+
+### Flask-Babel
+- flask babel & the message.pot workflow was a challenging micro service to intergrate in to my project
+- In order to get up & running I needed install flask babel, I again installed this database python package with the pip package manager
+- with the command pip install flask-babel
+- I then again imported flask-babel package from flask & created an instance with an application as an argument in my mother __init_.py
+- Next was to update my config.py to support my applications langauge prefrences
+- In order to use my flask babel package I first needed to create a babel.cfg file with my jinja templates & python paths programmed to parse
+- My next command was to extract my languages with the command pybabel extract -F babael.cfg -k _l -o messages.pot 
+- POT or otherwise known as portable object template
+- To compile my this file to a format so babel can compile at runtime
+- To achivev this I used the babael package again & ran the command pybabel compile -d  when running this command in your own project
+- this is where you need provide your top level directory path
+- After compilation babel will genrate a new messages.po, this is the file that will contain my langauges translations
+- To extract any new langauges I just needed to run the command pybabel extract -F babael.cfg -k _l -o messages.pot .
+- This command once again extracted my text , for the changes to take effect to my babel workflow, I needed to update
+- I used the similer command pybabel update -i messages.pot -d app/transaltions
+- This command updated my pot files with any new langauges that I decided to add to my project
 
 
 ### Database & Migrations 
@@ -130,12 +153,10 @@ The style of this website is very minimil, with a small bit of inline styling, t
 ## flask db history 
 
 - to manage & observe my database
-- to populate my tables in my database I worked in the python interactive shell , I enterd this shell with the command
+- to populate my tables in my database I worked in the python interactive shell , I entered this shell with the command
 - python
-- I also used flask shell , this eliminated the need to import my instance into my python shell everytime I wanted too manage my database I entered this
+- I also used flask shell , this eliminated the need to import my instance into my python shell everytime I wanted to manage my database I entered this
 - flask shell with the command flask shell
-
-### End Of Database & Migrations 
 
 
 
@@ -145,12 +166,101 @@ The style of this website is very minimil, with a small bit of inline styling, t
 ### Followers & Error Handling
 
 ### Ajax Magic
+To acheieve 
 
 ### Moment.js
+- To convert time in the browser using javascript I used a library called Moment.js
+- I again installed this package with the pip package manager with the command pip install flask-moment
+- I then again imported flask-babel package from flask & created an instance with an application as an argument 
+- Next added a Moment.js JavaScript Block to my base template
+- I then updated my jinja template code to reflect my changes , this was to show moment.js timestamp for the profile user
+- Also I updated my posts jinja templates, this was to insure all pages that will dispaly posts/notes wil display there time stamp
 
-### Email Support , Dates & Times & Flask-Babel 
 
-### Full-Text Search
+### Email Support 
+- For password recovery & emails I used flask-mail 
+- For password recovery  I used pyJWT
+- pyjwt will be sending links that include secuirty tokens , this is where I needed my jwt python package
+- With my venv active I needed to install flask-mail & pyJWT
+- I again installed these packages with the pip package manager with the command pip install flask-mail pyjwt
+- To initliase flask-mail, just like my similer micro services, I needed to import into my mother init.py package file
+- I then again imported flask-mail package from flask & created an instance with an application as an argument in my mother __init_.py
+- To test my builtin email server I ran the command python -m smtpd -n -c DebuggingServer localhost:8025
+- This started a test email server succesfully, to configer my server to listen to my sister terminal
+- I needed to set my ENV VARIABLE, I acheievd this with the command
+- export MAIL_SERVER=localhost 
+- export MAIL_PORT=8025
+
+### jwt testing 
+- To test my email in my terminal instance with my jwts 
+- to test my email I imported my flask app Message instance into my terminal session, from here 
+- I ran the command 
+flask shell
+>>> from flask_mail import Message
+>>> from app import mail
+>>> msg = Message('test subject', sender=app.config['ADMINS'] [0], recipients=['clivenoonan93@gmail.com'])
+>>> msg.body = 'text body'
+>>> msg.html = '<hi>HTML body<h1/>'
+>>> mail.send(msg)
+- [MyTestEmail](https://https://getbootstrap.com/)
+- The project uses **BootStrap4** to assist the Developer with a built in css library79376504
+- aswell as reusable components
+- I then updated my email.py methods & my jinja templates 
+- next was to update my routes
+
+
+### jwt
+- To use tokens in my emails I needed to base my structure on the Jason web token specification
+- With this method I could create secure tokens that connot be forged according to jwt standards
+- These jwt tokens are crypyographically signed , according to jwt standards, tamering with the data that jwt handles
+- this signature invaid , this inturn rejects the token
+- This whole process is controlled by the famous algorithm='HS256')
+- With this package I generated hash tokens
+- With this command I could verify & test the secuirty my applications email
+- I achieved this by once again importing my jwt package into my flask terminal instance in my cloud9 ide with my venv active 
+- to test my email secuirty I imported my flask app Message instance into my terminal session, from here 
+- I ran the command 
+flask shell
+>>> import jwt
+>>> token = jwt.encode({'a' : 'b'}, 'my-secret', algorithm='HS256')
+- Next I needed to print my token , I acheived this the command
+>>> token
+b'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhIjoiYiJ9.dvOo58OBDHiuSHD4uW88nfJikhYAXc_sfUHq1mDi4G0'
+- [MyTestjwt](https://https://getbootstrap.com/)
+- Next I needed to verify my token,  I acheived this the commands
+>>> jwt.decode(token, 'my-secret', algorithms=['HS256'])
+>>> {'a':'b'}
+- I then updated my models.py with my jwt decoding
+
+### jwt testing password & email recovery part2
+- to test my tokens I started a new flask shell session
+- I ran the command 
+flask shell
+>>> u = User.query.get(1)
+>>> u
+<User CliveNooNAnBCliveNooNAnBFRase>
+>>> u.get_reset_password_token()
+'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNldF9wYXNzd29yZCI6MSwiZXhwIjoxNTM3MjMwMzM2LjAxMTIyMjZ9.LqZvPtaWMXfH-ycjho3AtKbWPkHhUPe01f6V7xMDILU'
+>>> 
+- Verified 
+- <User CliveNooNAnBCliveNooNAnBFRase>
+- [MyTestjwtVerified](https://https://getbootstrap.com/)
+- Next task was to update my forms.py & my jinja templates
+
+### jwt testing password & email recovery part2
+- To test my newly created email & password recovery feature I started my debugging server once again with the command
+- python -m smtpd -n -c DebuggingServer localhost:8025
+- Next I went to my application which was running a in my cloud9 instance
+- On the main interface where you login, the first page the user is greeted with I filled the relevent details to recover my password
+-   [MyTestjwtVerifiedPasswordRecovery](https://https://getbootstrap.com/)
+
+
+
+
+### Elastic Search 
+- To integrate Elastic Search into my flask application I needed to reach out to the python eco system & install the python client 
+- I again installed this package with the pip package manager with the command pip install elasticsearch 
+- Next I needed to run elasticsearch in a sister terminal in my cloud9 terminal
 
 ### Notifications & Messages
 - The notifications & messages feature was one of the main 2 features I wanted to implement in this project,
@@ -165,25 +275,15 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - I also updated my templates to reflect my messaging system with html messaging templates
 - I then added a new message method in my route.py 
 - In order to have emphasis on the mail link in my navbar which is present on all pages, aswell as the drop down on mobile navigation
-- I needed to include my my jinja if statements in my base.html to define that if the message count is 0 there is nothing dispalyed
+- I needed to include my jinja if statements in my base.html to define that if the message count is 0 there is nothing dispalyed
 - My mail badge will appear only when there is unread message 
 - In order to make my badge more dynamic I need to use js by using a jquery fuction that searches for an element that repesents the badge
-- when jquery finds the element the css method is applied by changing the visisbilty of the badge to visible when there is a message &
+- when jquery finds the element the css method is applied by changing the visibilty of the badge to visible when there is a message &
 - not viisble when there is !not a message
 - Next was to create my notification models , I used the payload_json for this operation
 - because of this addition I also added a new model field to my main models.py to reflect my changes
 
  
-
-### Features Left to Implement
-
-- Another feature idea
-
-font-family: "Source Sans Pro",Helvetica,sans-serif
-
-    color: #666;
-    style="color:#666;" "font-family: "Source Sans Pro",Helvetica,sans-serif;"
-
 
 sET ENVIROMENT VARIBLE
 ## heroku config:set LOG_TO_STDOUT=1
@@ -226,12 +326,45 @@ sET ENVIROMENT VARIBLE
 
 - 
 
+body{
+  background: black /* fallback for   old browsers */
+  
+}
+
+.btn_small {
+    background-color: transparent;
+    color: black;
+    height: 24px;
+    width: 60px;
+    line-height: 24px;
+    margin: 5px 5px;
+    padding: 0 0.5em;
+}
+
+.btn-default {
+    color: #4e4c4c;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.task_header {
+    margin-top: 5px;
+}
+
+#navone{
+    color: #fff;
+    background-color: transparent;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}
+
 
 
 ## Technologies Used
 
 - [Flask](https://docs.djangoproject.com/)
-    - The project uses Django 2 for rapid web development, clean design & a pragmatic approach
+    - The project uses Django 2 for rapid web development, clean design & a pragmatic approach .
 
 - [Cloud9](https://https://c9.io/)
     - The project uses Cloud9 to Write/Code & format syntax in various languages.
@@ -250,10 +383,9 @@ sET ENVIROMENT VARIBLE
 - [CSS3](https://https://www.w3schools.com/)
     - The project uses **CSS3** to to Style the elements & Responsive WebDesign.
     
-- [Js](https://https://https://www.w3schools.com/)
+- [MomentJs](https://https://https://www.w3schools.com/)
     - The project uses **Js** to add interactivity & to interact with stripe.
         
-   
 - [LightHouseChromeExstention](https://chrome.google.com/webstore/detail/lighthouse)
     - The project uses **LightHouseChromeExstention** to test seo data & accsseibitly & best practices
     
@@ -261,6 +393,10 @@ sET ENVIROMENT VARIBLE
     - The project uses **validator.w3** to test seo data & accsseibitly & best practices
     
 - [jigsaw.w3](https://jigsaw.w3g/)
+    - The project uses **jigsaw.w3** to test validation of CSS3
+    -also to test seo data & accessibility & best practices
+
+- [Jinja.Templates](https://jigsaw.w3g/)
     - The project uses **jigsaw.w3** to test validation of CSS3
     -also to test seo data & accessibility & best practices
 
@@ -388,7 +524,7 @@ For any scenarios that have not been automated, test the user stories manually a
     3. Try to submit the form with an invalid email address and verify that a relevant error message appears
     4. Try to submit the form with all inputs valid and verify that a success message appears.
 
-## My Application looks amazingly responsive across al screnn sizes this is maonly down to the flask framework & FlaskBootStrap 
+## My Application looks amazingly responsive across all screen sizes this is mainly down to the Flask Framework & FlaskBootStrap 
 
 
 
