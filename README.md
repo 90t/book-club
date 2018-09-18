@@ -10,7 +10,7 @@ The inspiration for this project came from studying python since 2016 before I a
 - of this website
 - I wanted to see if I could develop a messaging system without having to leave the flask eco system
 - Creating Database for users & Post & followers with SQLACHemy
-- A driver behind the conception of this project was one to one , many to many, many to one, one to none, database relationsips
+- A driver behind the conception of this project is the one to many, & many to many database relationsip of the followers
 - For this task I would need a database, this was a key feature that I needed to explore & my application would depend on it 
 - I also wanted to explore Flask-SQLAlchemy, the orm which allows a dev to programme a database
 - Another key driver behind this project was idea of building a fullstack application with flask & cloud9, this was of course a challenge
@@ -122,6 +122,89 @@ The setup for this project was similer Django but with slight variations
 - I used the similer command pybabel update -i messages.pot -d app/transaltions
 - This command updated my pot files with any new langauges that I decided to add to my project
 
+## Translations & Ajax
+- With accessibilty as the main point of this feature , language translation on each post would bring this application international
+- With the transalate button acting as my hook to my Micrsoft Azure API Key
+- I used Ajax to asynchronously update my translations
+- To ahcieve this I neededd to create client side js scripts
+- Next task was to set my MicroSoft Azure Translate Service API key
+- This is a free thier, perfect for testing
+- Next I had to add a translator resource in my Azure portal
+- After retreiving & copying my API Key 
+- I next I installed guess_language_spirit & requests
+- I achieved this with the python package with the pip package manager
+- I ran the command pip install guess_language_spirit  requests
+- My next task was to update my models in my project models to take effect to my database, I needed to run a upgrade command,
+- flask db upgrade became a part of my migration workflow
+- I then worked with the commands 
+- flask db migrate
+- flask db upgrade
+- I next updated my routes to match my models logic
+- 
+
+
+## Translations Testing
+- To test my API Key
+- I first needed to assocaite my application with my MS_TRANSLATOR_KEY
+- I achieved this by exporting another Enviroment Variable
+- I achieved this with in my terminal , with my venv active I ran export MS_TRANSLATOR_KEY="api key from azure go,s here without the qoutes" in the cli while
+- sister cli server is running
+- Now my key is in my env my Next task was to update my projects config.py
+- Flask Shell was next to test my api in my terminal
+- I achieved this with the command flask shell
+- My earlier installation of the python package requests will now come in to play in my apllication with a get request to microssoft for api validation
+- After my testing was complete I updated my routes to reflect my changes, my translate route
+
+## Translations Testing In My Terminal
+- First I needed obtain my microsoft url in my portal documentation
+- In my terminal with my python flask shell active I first ran the config command form microsoft
+- 
+- In my terminal with my python flask shell active I first imported my requests
+- With the command
+>>> r = requests.get('https://api.microsofttranslator.com/v2/Ajax.svc/Translate?text= 
+como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS_TRANSLATOR_KEY']})
+- I then needed to import requests
+>>> import requests
+- I then needed to run
+ r = requests.get('https://api.microsofttranslator.com/v2/Ajax.svc/Translate?text=hola como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS_TRANSLATOR_KEY']})
+ - Next was check my status code for my get request with this code
+ >>> r.status_code
+ - This was because I stored my request in my r variable
+ 200
+ - the final task was check my contene to verify the translation was succesfull
+ - I did this with r.content command in my python flask shell
+ >>> r.content
+ b'\xef\xbb\xbf"Hi, how are you?"'
+
+ ##### Success
+ 
+
+
+##
+## import requests
+## r = requests.get('https://api.microsofttranslator.com/v2/Ajax.svc/Translate?text= 
+## como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS_TRANSLATOR_KEY']})
+## 
+## r.status_code
+
+
+
+
+
+### Followers
+- To implement this feature in my project I needed to create my followers table in my modles.py
+- Which will be mapped & managed with my ORM
+- to create my first migration I used to command flask db migrate -m "just like git commit messsage ", just like git a message can be included in your migration
+- for the changes in my project models to take effect to my database, I needed to run a upgrade command,
+- flask db upgrade became a part of my migration workflow
+- I then worked with the commands 
+- flask db migrate
+- flask db upgrade
+- flask db downgrade
+- flask db current 
+- flask db history 
+
+
 
 ### Database & Migrations 
 
@@ -158,12 +241,6 @@ The setup for this project was similer Django but with slight variations
 - I also used flask shell , this eliminated the need to import my instance into my python shell everytime I wanted to manage my database I entered this
 - flask shell with the command flask shell
 
-
-
-### User Logins & Avatars 
-- I built my user subsystem with password hashing , by storing them in password hashs
-
-### Followers & Error Handling
 
 ### Ajax Magic
 To acheieve 
@@ -247,7 +324,7 @@ flask shell
 - [MyTestjwtVerified](https://https://getbootstrap.com/)
 - Next task was to update my forms.py & my jinja templates
 
-### jwt testing password & email recovery part2
+### jwt testing password & email recovery part3
 - To test my newly created email & password recovery feature I started my debugging server once again with the command
 - python -m smtpd -n -c DebuggingServer localhost:8025
 - Next I went to my application which was running a in my cloud9 instance
