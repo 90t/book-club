@@ -114,13 +114,15 @@ The setup for this project was similer Django but with slight variations
 - My next command was to extract my languages with the command pybabel extract -F babael.cfg -k _l -o messages.pot 
 - POT or otherwise known as portable object template
 - To compile my this file to a format so babel can compile at runtime
-- To achivev this I used the babael package again & ran the command pybabel compile -d  when running this command in your own project
+- To achive this I used the babael package again & ran the command pybabel compile -d  when running this command in your own project
 - this is where you need provide your top level directory path
-- After compilation babel will genrate a new messages.po, this is the file that will contain my langauges translations
+- After compilation babel will generate a new messages.po, this is the file that will contain my langauges translations
 - To extract any new langauges I just needed to run the command pybabel extract -F babael.cfg -k _l -o messages.pot .
 - This command once again extracted my text , for the changes to take effect to my babel workflow, I needed to update
 - I used the similer command pybabel update -i messages.pot -d app/transaltions
 - This command updated my pot files with any new langauges that I decided to add to my project
+
+
 
 ## Translations & Ajax
 - With accessibilty as the main point of this feature , language translation on each post would bring this application international
@@ -177,6 +179,9 @@ como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS
  b'\xef\xbb\xbf"Hi, how are you?"'
 
  ##### Success
+
+ https://api.cognitive.microsoft.com/sts/v1.0
+ 39a435d5-c3ef-432b-befd-d9b5827dffa3
  
 
 
@@ -188,21 +193,6 @@ como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS
 ## r.status_code
 
 
-
-
-
-### Followers
-- To implement this feature in my project I needed to create my followers table in my modles.py
-- Which will be mapped & managed with my ORM
-- to create my first migration I used to command flask db migrate -m "just like git commit messsage ", just like git a message can be included in your migration
-- for the changes in my project models to take effect to my database, I needed to run a upgrade command,
-- flask db upgrade became a part of my migration workflow
-- I then worked with the commands 
-- flask db migrate
-- flask db upgrade
-- flask db downgrade
-- flask db current 
-- flask db history 
 
 
 
@@ -241,9 +231,19 @@ como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS
 - I also used flask shell , this eliminated the need to import my instance into my python shell everytime I wanted to manage my database I entered this
 - flask shell with the command flask shell
 
+### Followers
+- To implement this feature in my project I needed to create my followers table in my modles.py
+- Which will be mapped & managed with my ORM
+- to create my first migration I used to command flask db migrate -m "just like git commit messsage ", just like git a message can be included in your migration
+- for the changes in my project models to take effect to my database, I needed to run a upgrade command,
+- flask db upgrade became a part of my migration workflow
+- I then worked with the commands 
+- flask db migrate
+- flask db upgrade
+- flask db downgrade
+- flask db current 
+- flask db history 
 
-### Ajax Magic
-To acheieve 
 
 ### Moment.js
 - To convert time in the browser using javascript I used a library called Moment.js
@@ -338,6 +338,7 @@ flask shell
 - To integrate Elastic Search into my flask application I needed to reach out to the python eco system & install the python client 
 - I again installed this package with the pip package manager with the command pip install elasticsearch 
 - Next I needed to run elasticsearch in a sister terminal in my cloud9 terminal
+- This is where cloud9 refused to run a Elastic Search server find out why??
 
 ### Notifications & Messages
 - The notifications & messages feature was one of the main 2 features I wanted to implement in this project,
@@ -397,7 +398,10 @@ sET ENVIROMENT VARIBLE
 ## git commit -m ""
 ##
 ## git push heroku master
-##
+##- pybabel extract -F babael.cfg -k _l -o messages.pot .
+
+- /home/ubuntu/workspace/(env) clivenoonan:~/workspace/babel.cfg
+
 - 
 
 
@@ -749,6 +753,9 @@ For any scenarios that have not been automated, test the user stories manually a
 ## (env) clivenoonan:~/workspace (master) $ heroku apps:create book-of-hue
 ## Creating ⬢ book-of-hue... done
 ## https://book-of-hue.herokuapp.com/ | https://git.heroku.com/book-of-hue.git
+pybabel extract -F babael.cfg -k _l -o messages.pot .
+/babel.cfg
+/home/ubuntu/workspace/(env) clivenoonan:~/workspace (master)
 ## 
 ##
 ## Example
