@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/90t/book-club.svg?branch=master)](https://travis-ci.org/90t/book-club)
 # CodeNote flasks micro services
 
-### The inspiration for this project came from studying python since 2016 before I attended IT & Maintenance in CoCC , this python class was ### of a night time in CoCC,
+#### The inspiration for this project came from studying python since 2016 before I attended IT & Maintenance in CoCC ,
+#### this python class was of a night time in CoCC,
 - Since then moving on to SoloLearn on my phone ,then Code institute with SoloLearn agian & then syllabus1_LMS1 & syllabus2_LMS2(cloud9)
 - At this stage I was really looking forward to building something real in web development with the flask framework I had heard so much about
 - Flasks Micro services was what I was really interested in , I was setting out to incorporate & learn microservices to speed up, improve, &
@@ -41,9 +42,7 @@ Once on this page the user has the abitly to go home to his own posts/notes page
 - The pop up box is also interactive, a user can select a user name & be transported to there profile page or a users profile page 
 - They can also follow or unfollow a user by accessing there profile page , but the user can not follow themselves
 - The users profile page is also the page where other coders/users can private message another coder/user
-- 
 - The home page is the page where users can leave a Note/Post & then this Note/Post will show up on the CodeNotes page, & there own home page
-- 
 - This application can come in very handy indeed , if 2 developers were working on a project ,
 - they could very easliy communicate with one another through the use of the mailing system 
 - with little to no distraction
@@ -146,7 +145,7 @@ The setup for this project was similer Django but with slight variations
 - I achieved this with the python package with the pip package manager
 - I ran the command pip install guess_language_spirit  requests
 - My next task was to update my models in my project models to take effect to my database, I needed to run a upgrade command,
-- flask db upgrade became a part of my migration workflow
+- flask db upgrade became a part of my migration workflow 
 - I then worked with the commands 
 - flask db migrate
 - flask db upgrade
@@ -243,19 +242,6 @@ The setup for this project was similer Django but with slight variations
 
 
 
-
-
-### Elastic Search 
-- To integrate Elastic Search into my flask application I needed to reach out to the python eco system & install the python client 
-- I again installed this package with the pip package manager with the command pip install elasticsearch 
-- Next I needed to run elasticsearch in a sister terminal in my cloud9 terminal
-- This is where cloud9 refused to run a Elastic Search server find out why??
-
-
-
-
-
-
 ### Notifications & Messages
 - The notifications & messages feature was one of the main 2 features I wanted to implement in this project,
 - This was down to there dynamic nature
@@ -313,11 +299,15 @@ The setup for this project was similer Django but with slight variations
     
 - [jigsaw.w3](https://jigsaw.w3g/)
     - The project uses **jigsaw.w3** to test validation of CSS3
-    -also to test seo data & accessibility & best practices
+    - also to test seo data & accessibility & best practices
 
 - [Jinja.Templates](https://jigsaw.w3g/)
     - The project uses **jigsaw.w3** to test validation of CSS3
-    -also to test seo data & accessibility & best practices
+    - also to test seo data & accessibility & best practices
+
+- [MARKDOWN](https://https://www.w3schools.com/)
+    - The project uses **jigsaw.w3** to test validation of CSS3
+    - also to test seo data & accessibility & best practices
 
 
 
@@ -483,7 +473,7 @@ flask shell
 - He hasnt posted a note in a while, his popup profile box told him today, so he forgot what password he signed up with
 - When User1:David arrives home he decides to have a look at that data website, as he proceeds to login, he reliases he cant remeber his passsword
 - He selects the recover password option on the signinn page
-- After reseting his password he checks the main codepost page & sees that his coder buddy has left a codenote in spanish
+- After resetting his password he checks the main codepost page & sees that his coder buddy has left a codenote in spanish
 - He presses his translate button next to the post that coffe posted at 4:30,
 - When User1:David was about the private message User2:Coffe back, he noticed a code post & clicked on the users profile, after reading that the user is a coder
 - setting up his own coder dojo he decides to follow the user,
@@ -615,16 +605,24 @@ Tested On
 ## Bugs
 
 ##### Email
+- To integrate Email password recovery into my application I used flask mail & jwt tokens for incryption
+- I did have a succesfull recovery of an email through the use of pasting the url I recieved in my testing of this feature
+- I have yet to determine if Another outside of my network can achieve the same 
+- Seemingly it is more diffucult than you think to convince users to signup for a social messaging application
 
 ##### Translations
+- The transaltions feature of this application, was by far the most difficult work flow tp master
+- I am convinced to problem lies in my compileing of my ready made spanish messages.pot file  
+- I will be lookig to this bug & when I have it resolved I will updaet this bug notice
+
 
 ##### redis
+- When installing redis I had a succesfull installation & I was succesfull in starting a redis server in a sister terminal
+- I was not succesfull in connecting to my server for testing
+- 
 
-##### ElasticSearch
-
-
-## My Application looks amazingly responsive across all screen sizes this is mainly down to the Flask Framework & FlaskBootStrap
-
+### Elastic Search 
+- To integrate Elastic Search into my flask application I needed install it on cloud9 , I had an installation failure here also
 
 
 ## Deployment
@@ -665,31 +663,27 @@ Tested On
 - Finally I ran the command Git push heroku master to sync my Heroku repo
 - 
 ## My Live Practical Python Project CodeNote can be viewed fully deployed on heroku [here](http://my-book-of-hue.herokuapp.com/)
+## My Application looks amazingly responsive across all screen sizes this is mainly down to the Flask Framework & FlaskBootStrap
 
-## VERSION CONTROL
+### VERSION CONTROL
 
 - The  project folder lives at this address
   [github](https://github.com/90t/book-club) <------ THIS IS THE LIVE PROJECT FOLDER
 - [heroku](https://git.heroku.com/book-of-hue.git) 
 - [origin](https://github.com/90t/book-club)
 
-- I added my env vars in the heroku cloud managment console in the settings section,
-- which were my api key & my CLARAFIAI_API variable
-- I created a viarible named CLARAFIAI_API in my backend project this connected my application to heroku 
 
-
-
-# It is very easy to download install & run this project directly,
-# first you need to make sure you have Node.js installed on your computer
-# once you have eistablished you have a version number you are good to go
-# you then will have to git clone both of my repo,s
-# once cloned you have to run npm install
-# in both projects you will have to make sure you have your own directory setup for both different projects, 
-# you need to be in the diretory which you cloned into, where your package.json is located
-# after this you will have your pgAdmin installed on you computer & setup,
-# Then you have to make the nessacary changes to suit you needs,
-# as in your pgadmin creds
-# you could also use a differnet rational database
+##### It is very easy to download install & run this project directly,
+##### first you need to make sure you have Node.js installed on your computer
+##### once you have eistablished you have a version number you are good to go
+##### you then will have to git clone both of my repo,s
+##### once cloned you have to run npm install
+##### in both projects you will have to make sure you have your own directory setup for both different projects, 
+##### you need to be in the diretory which you cloned into, where your package.json is located
+##### after this you will have your pgAdmin installed on you computer & setup,
+##### Then you have to make the nessacary changes to suit you needs,
+##### as in your pgadmin creds
+##### you could also use a differnet rational database
 
 
 
@@ -697,30 +691,19 @@ Tested On
 StackOverFlow
 
 ### Content
-- The text for just a small bit of the tech  discription was copied from the [Wikipedia](https://en.wikipedia.org/)
+- I wrote all the content
 
 ### Media
-- The photos used in this site were obtained from PixelBay
+- There are no images in this website
 
 ### Acknowledgements
 ##### I didn't base my work off other code, I used only what I had learnt in syllabuss1/LMS1 & syllabuss2/LMS2(cloud-9) &
-- [Node.js](https://reactjs.org/)
-    - Documentation.
+- [www.fullstackpython.com](https://www.fullstackpython.com/flask.html) 
+- - [flask.pocoo.org](http://flask.pocoo.org/docs/1.0/quickstart/) 
+- - [opensource](https://opensource.com/article/18/4/flask) 
+- - [www.digitalocean.com](https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications) 
+- - [www.ntu.edu.sg](http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/Python3_Flask.html)
 
-- [Esxprss.js](https://reactjs.org/)
-    - Documentation.
 
-- [React.js](https://reactjs.org/)
-    - Documentation.
 
-- [PGAdmin3](https://www.pgadmin.org/)
-    - Documentation.
-
-- [Postgres](https://www.postgresql.org/)
-    - Documentation.
-
-- [clarifaiAPI](https://clarifai.com/)
-    - Documentation.
-
-##### 10/09/2018 This is Clive Noonan , Code Initstute , Project Number3, Signing Off......
-
+##### 19/09/2018 This is Clive Noonan , Code Initstute , Project Number4, Signing Off......
