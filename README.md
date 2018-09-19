@@ -476,16 +476,41 @@ flask shell
 
 
 ##### USER1:
-gets wind of an awesome surfing website where he can buy surfboards,
-he finds the link thru soacial media & connects , he browses the site for a few minutes & decides he might make a purchase , he completes his purchase with out having to create an account
-Test1 User1 ( True/False )
-Was User1 able to complete his purchase with out having to create an account?
-True
+#### User1:David
+- Clicks the saved tumbnail he has saved on his sony smartphone, he connects to his favourite CodeNote site, he has just read a very interesting article about a
+- dashhboard website that compares plotly & d3, he has his link copied to his clipboard in his paste , he doesnt want to bookmark it , this is because he has so
+- many bookmarks, he is beginning to loose all that on the go information, so he pastes the link into his CodeNote socail media home page, from here can comeback &
+- check the date & time without any interuption or getting sidetracked along the way,
+- just before he leaves he sees his mail box has 1 message , he checks his mail page,& see,s he has a message from Coffe, he reads the message & decides that he
+- will reply,
+- When logging out of his account, he never clicked the remember me button, User1:David is constantly clearing the storage in his phone , must be from all the
+- bookmarks,
+- He hasnt posted a note in a while, his popup profile box told him today, so he forgot what password he signed up with
+- When User1:David arrives home he decides to have a look at that data website, as he proceeds to login, he reliases he cant remeber his passsword
+- He selects the recover password option on the signinn page
+##### Test1 User1 ( True/False )
+### Was User1 able to complete recieve a message form User2:Coffe?
+# True
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
+##### Test1 User1 ( True/False )
+### Was User1 able to complete recieve a message form User2:Coffe?
+# True
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
+##### Test1 User1 ( True/False )
+### Was User1 able to complete recieve a message form User2:Coffe?
+# True
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
+##### Test1 User1 ( True/False )
+### Was User1 able to complete recieve a message form User2:Coffe?
+# True
  - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
  - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
 
 
-##### USER2:
+##### UUser2:Coffe
 is just packing up from surfing for the day, when she hears an advert on the radio about an online surf shop , she clicks on ,after being in the water all day she fills in her details incorrectly, she tries again with all the correct details , but being in such a hurry , she never finishes the task , so she puts the phone down , when she arrives home , she brings her mobile with her , she puts it down , her daugther picks it up & begins exploring the website, she gets thru most of it & discovers the cart , she manages to get all the way with a pink surfboard she quite fancied, she gets to the stripe popup box, & recalls her dad working treiesly on something the exact same on his computer, she remembers what to do , she manages to remeber the test long password with the same numbers , then she remembers the easy one with 3 numbers , 
 
 She is then left with the calender, she does not qiute understand this type of calender, so she fills in what she knows and carrys on , she see,s the little box shake with disagreement & decides she better put it away
@@ -494,31 +519,30 @@ Test1 User2 ( True/False )
 Was User2 able to create an account when she filled in her details incorrectly?
 Falsh
 Was User2 daugther able to make a purchase when she filled in her details incorrectly?
-falsh
-RESULT 100%
-- [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
-- [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
+##### Test1 User1 ( True/False )
+### Was User1 able to complete recieve a message form User2:Coffe?
+# True
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
 
+##### Test1 User1 ( True/False )
+### Was User1 able to complete recieve a message form User2:Coffe?
+# True
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
 
+##### Test1 User1 ( True/False )
+### Was User1 able to complete recieve a message form User2:Coffe?
+# True
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
 
-##### USER3:
-is coming home from work on the bus  he begins to shoulder surf another passengers laptop , as he admires the website he retrives his mobile from his pocket & reads the address, connects to the website, he attempts signing up for the first time , USER3 has only been using a mobile for a week he has spent most of his life on the beach, must be why his eyes are so good,
-he fills in his details with the first name & the last name as the same name,
-he then attempts to only enter in 6 characters in the passsword field, with an incorrect email address , 
+##### Test1 User1 ( True/False )
+### Was User1 able to complete recieve a message form User2:Coffe?
+# True
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
 
-After a bit of a shock from all the errors he concetrates on the insructions before him , after a few minutes studying , he fills out all the info correctly, except for his email address, he then attempts for the second time to register an account , observing the error , he realises he has forgotten his @ symbol , he then corrects his typo & proceeds , 
-
-Test1 User3 ( True/False )
-Was User3 able to create an account when he filled in his details incorrectly?
-Falsh
-Was User3 able to create an account when he filled in his details with just the @ symbol missing?
-falsh
-Was User3 able to create an account when he filled in his details correctly?
-True
-RESULT 100%
-
-- [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
-- [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
 
 
 
