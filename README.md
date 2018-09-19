@@ -1,5 +1,14 @@
 [![Build Status](https://travis-ci.org/90t/book-club.svg?branch=master)](https://travis-ci.org/90t/book-club)
 
+# JOBS STILL LEFT DO TO
+
+
+- EXPLAIN FOLLOWERS & SCHEMEA BETTER
+- USER TESTING, TRANSLATE_LINK, POSTS,  LOGIN , MESSAGING, MESSAGING TO & FROM MOBILE ON DIFFERENT NETWORKS
+- INSERT ALL PROOF IMAGES
+- SPELL CHECK
+- CUT UP TRANSLATIONS & IMPROVE
+
 # CodeNote flasks micro services
 
 The inspiration for this project came from studying python since 2016 before I attended IT & Maintenance in CoCC , this python class was of a night time in CoCC,
@@ -142,46 +151,10 @@ The setup for this project was similer Django but with slight variations
 - flask db migrate
 - flask db upgrade
 - I next updated my routes to match my models logic
-- 
-
-
-## Translations Testing
-- To test my API Key
-- I first needed to assocaite my application with my MS_TRANSLATOR_KEY
-- I achieved this by exporting another Enviroment Variable
-- I achieved this with in my terminal , with my venv active I ran export MS_TRANSLATOR_KEY="api key from azure go,s here without the qoutes" in the cli while
-- sister cli server is running
-- Now my key is in my env my Next task was to update my projects config.py
-- Flask Shell was next to test my api in my terminal
-- I achieved this with the command flask shell
-- My earlier installation of the python package requests will now come in to play in my apllication with a get request to microssoft for api validation
-- After my testing was complete I updated my routes to reflect my changes, my translate route
-
-## Translations Testing In My Terminal
-- First I needed obtain my microsoft url in my portal documentation
-- In my terminal with my python flask shell active I first ran the config command form microsoft
-- 
-- In my terminal with my python flask shell active I first imported my requests
-- With the command
->>> r = requests.get('https://api.microsofttranslator.com/v2/Ajax.svc/Translate?text= 
-como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS_TRANSLATOR_KEY']})
-- I then needed to import requests
->>> import requests
-- I then needed to run
- r = requests.get('https://api.microsofttranslator.com/v2/Ajax.svc/Translate?text=hola como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS_TRANSLATOR_KEY']})
- - Next was check my status code for my get request with this code
- >>> r.status_code
- - This was because I stored my request in my r variable
- 200
- - the final task was check my contene to verify the translation was succesfull
- - I did this with r.content command in my python flask shell
- >>> r.content
- b'\xef\xbb\xbf"Hi, how are you?"'
-
- ##### Success
 
  https://api.cognitive.microsoft.com/sts/v1.0
  39a435d5-c3ef-432b-befd-d9b5827dffa3
+ # <nav class="navbar" style="color:#666;" "font-family: "Source Sans Pro",Helvetica,sans-serif;">
  
 
 
@@ -224,12 +197,13 @@ como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS
 ## flask db downgrade
 ## flask db current 
 ## flask db history 
-
 - to manage & observe my database
 - to populate my tables in my database I worked in the python interactive shell , I entered this shell with the command
 - python
 - I also used flask shell , this eliminated the need to import my instance into my python shell everytime I wanted to manage my database I entered this
 - flask shell with the command flask shell
+
+
 
 ### Followers
 - To implement this feature in my project I needed to create my followers table in my modles.py
@@ -245,6 +219,9 @@ como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS
 - flask db history 
 
 
+
+
+
 ### Moment.js
 - To convert time in the browser using javascript I used a library called Moment.js
 - I again installed this package with the pip package manager with the command pip install flask-moment
@@ -252,6 +229,8 @@ como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS
 - Next added a Moment.js JavaScript Block to my base template
 - I then updated my jinja template code to reflect my changes , this was to show moment.js timestamp for the profile user
 - Also I updated my posts jinja templates, this was to insure all pages that will dispaly posts/notes wil display there time stamp
+
+
 
 
 ### Email Support 
@@ -268,68 +247,6 @@ como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS
 - export MAIL_SERVER=localhost 
 - export MAIL_PORT=8025
 
-### jwt testing 
-- To test my email in my terminal instance with my jwts 
-- to test my email I imported my flask app Message instance into my terminal session, from here 
-- I ran the command 
-flask shell
->>> from flask_mail import Message
->>> from app import mail
->>> msg = Message('test subject', sender=app.config['ADMINS'] [0], recipients=['clivenoonan93@gmail.com'])
->>> msg.body = 'text body'
->>> msg.html = '<hi>HTML body<h1/>'
->>> mail.send(msg)
-- [MyTestEmail](https://https://getbootstrap.com/)
-- The project uses **BootStrap4** to assist the Developer with a built in css library79376504
-- aswell as reusable components
-- I then updated my email.py methods & my jinja templates 
-- next was to update my routes
-
-
-### jwt
-- To use tokens in my emails I needed to base my structure on the Jason web token specification
-- With this method I could create secure tokens that connot be forged according to jwt standards
-- These jwt tokens are crypyographically signed , according to jwt standards, tamering with the data that jwt handles
-- this signature invaid , this inturn rejects the token
-- This whole process is controlled by the famous algorithm='HS256')
-- With this package I generated hash tokens
-- With this command I could verify & test the secuirty my applications email
-- I achieved this by once again importing my jwt package into my flask terminal instance in my cloud9 ide with my venv active 
-- to test my email secuirty I imported my flask app Message instance into my terminal session, from here 
-- I ran the command 
-flask shell
->>> import jwt
->>> token = jwt.encode({'a' : 'b'}, 'my-secret', algorithm='HS256')
-- Next I needed to print my token , I acheived this the command
->>> token
-b'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhIjoiYiJ9.dvOo58OBDHiuSHD4uW88nfJikhYAXc_sfUHq1mDi4G0'
-- [MyTestjwt](https://https://getbootstrap.com/)
-- Next I needed to verify my token,  I acheived this the commands
->>> jwt.decode(token, 'my-secret', algorithms=['HS256'])
->>> {'a':'b'}
-- I then updated my models.py with my jwt decoding
-
-### jwt testing password & email recovery part2
-- to test my tokens I started a new flask shell session
-- I ran the command 
-flask shell
->>> u = User.query.get(1)
->>> u
-<User CliveNooNAnBCliveNooNAnBFRase>
->>> u.get_reset_password_token()
-'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNldF9wYXNzd29yZCI6MSwiZXhwIjoxNTM3MjMwMzM2LjAxMTIyMjZ9.LqZvPtaWMXfH-ycjho3AtKbWPkHhUPe01f6V7xMDILU'
->>> 
-- Verified 
-- <User CliveNooNAnBCliveNooNAnBFRase>
-- [MyTestjwtVerified](https://https://getbootstrap.com/)
-- Next task was to update my forms.py & my jinja templates
-
-### jwt testing password & email recovery part3
-- To test my newly created email & password recovery feature I started my debugging server once again with the command
-- python -m smtpd -n -c DebuggingServer localhost:8025
-- Next I went to my application which was running a in my cloud9 instance
-- On the main interface where you login, the first page the user is greeted with I filled the relevent details to recover my password
--   [MyTestjwtVerifiedPasswordRecovery](https://https://getbootstrap.com/)
 
 
 
@@ -339,6 +256,11 @@ flask shell
 - I again installed this package with the pip package manager with the command pip install elasticsearch 
 - Next I needed to run elasticsearch in a sister terminal in my cloud9 terminal
 - This is where cloud9 refused to run a Elastic Search server find out why??
+
+
+
+
+
 
 ### Notifications & Messages
 - The notifications & messages feature was one of the main 2 features I wanted to implement in this project,
@@ -361,84 +283,6 @@ flask shell
 - Next was to create my notification models , I used the payload_json for this operation
 - because of this addition I also added a new model field to my main models.py to reflect my changes
 
- 
-
-sET ENVIROMENT VARIBLE
-## heroku config:set LOG_TO_STDOUT=1
-## Created postgresql-graceful-71515 as DATABASE_URL
-## 
-## 
-## Compile Languages
-## 
-## 
-## 
-## 
-## SET HEROKU ENVIROMENT VARIBLE
-## heroku config:set FLASK_APP=blog.py
-## Setting FLASk_APP and restarting ⬢ book-of-hue... done, v5
-## FLASK_APP: blog.py
-## 
-## 
-## PUSH TO HEROKU WORKFLOW
-## no changes added to commit (use "git add" and/or "git commit -a")
-## (env) clivenoonan:~/workspace (master) $ git add .
-## (env) clivenoonan:~/workspace (master) $ git commit -m "First push to heroku"
-## [master 9f10d8c] First push to heroku
-## 
-## 
-## https://my-book-of-hue.herokuapp.com/ | https://git.heroku.com/my-book-of-hue.git
-##
-## HEROKU UPDATE WORKFLOW
-## 
-## 
-## heroku login
-## 
-## git add .
-##
-## git commit -m ""
-##
-## git push heroku master
-##- pybabel extract -F babael.cfg -k _l -o messages.pot .
-
-- /home/ubuntu/workspace/(env) clivenoonan:~/workspace/babel.cfg
-
-- 
-
-
-- 
-
-body{
-  background: black /* fallback for   old browsers */
-  
-}
-
-.btn_small {
-    background-color: transparent;
-    color: black;
-    height: 24px;
-    width: 60px;
-    line-height: 24px;
-    margin: 5px 5px;
-    padding: 0 0.5em;
-}
-
-.btn-default {
-    color: #4e4c4c;
-    background-color: #fff;
-    border-color: #ccc;
-}
-
-.task_header {
-    margin-top: 5px;
-}
-
-#navone{
-    color: #fff;
-    background-color: transparent;
-    width: 100%;
-    height: 56px;
-    line-height: 56px;
-}
 
 
 
@@ -481,6 +325,14 @@ body{
     - The project uses **jigsaw.w3** to test validation of CSS3
     -also to test seo data & accessibility & best practices
 
+
+
+
+
+
+
+
+
 ## Micro Services
 
 - [FlaskBootStrap](https://https://getbootstrap.com/)
@@ -514,6 +366,8 @@ body{
 
 
 
+
+
 ## Testing
 
 
@@ -538,18 +392,125 @@ Tested On
 - [LightHouse](https://chrome.google.com/webstore/category/extensions) 
 
 
-## Testing
+## Testing ## Translations Testing
+- To test my API Key
+- I first needed to assocaite my application with my MS_TRANSLATOR_KEY
+- I achieved this by exporting another Enviroment Variable
+- I achieved this with in my terminal , with my venv active I ran export MS_TRANSLATOR_KEY="api key from azure go,s here without the qoutes" in the cli while
+- sister cli server is running
+- Now my key is in my env my Next task was to update my projects config.py
+- Flask Shell was next to test my api in my terminal
+- I achieved this with the command flask shell
+- My earlier installation of the python package requests will now come in to play in my apllication with a get request to microssoft for api validation
+- After my testing was complete I updated my routes to reflect my changes, my translate route
+
+## Translations Testing In My Terminal
+- First I needed obtain my microsoft url in my portal documentation
+- In my terminal with my python flask shell active I first ran the config command form microsoft
+- 
+- In my terminal with my python flask shell active I first imported my requests
+- With the command
+>>> r = requests.get('https://api.microsofttranslator.com/v2/Ajax.svc/Translate?text= 
+como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS_TRANSLATOR_KEY']})
+- I then needed to import requests
+>>> import requests
+- I then needed to run
+ r = requests.get('https://api.microsofttranslator.com/v2/Ajax.svc/Translate?text=hola como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS_TRANSLATOR_KEY']})
+ - Next was check my status code for my get request with this code
+ >>> r.status_code
+ - This was because I stored my request in my r variable
+ 200
+ - the final task was check my contene to verify the translation was succesfull
+ - I did this with r.content command in my python flask shell
+ >>> r.content
+ b'\xef\xbb\xbf"Hi, how are you?"'
+
+ ##### Success
+ - [TranslationsTestingInMyTerminalScreenShot](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Translations/translator_api_proof.PNG)
+ - [TranslationsTestingInMyTerminalScreenShot](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Translations/translator_api_proof2.PNG) 
 
 
-USER1 :
+ ## Testing
+ ### jwt testing 
+- To test my email in my terminal instance with my jwts 
+- to test my email I imported my flask app Message instance into my terminal session, from here 
+- I ran the command 
+flask shell
+>>> from flask_mail import Message
+>>> from app import mail
+>>> msg = Message('test subject', sender=app.config['ADMINS'] [0], recipients=['clivenoonan93@gmail.com'])
+>>> msg.body = 'text body'
+>>> msg.html = '<h1>HTML body<h1/>'
+>>> mail.send(msg)
+- [MyTestEmail](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/email_proof.PNG)
+- The project uses **BootStrap4** to assist the Developer with a built in css library79376504
+- aswell as reusable components
+- I then updated my email.py methods & my jinja templates 
+- next was to update my routes
+
+
+### jwt
+- To use tokens in my emails I needed to base my structure on the Jason web token specification
+- With this method I could create secure tokens that connot be forged according to jwt standards
+- These jwt tokens are crypyographically signed , according to jwt standards, tamering with the data that jwt handles
+- this signature invaid , this inturn rejects the token
+- This whole process is controlled by the famous algorithm='HS256')
+- With this package I generated hash tokens
+- With this command I could verify & test the secuirty my applications email
+- I achieved this by once again importing my jwt package into my flask terminal instance in my cloud9 ide with my venv active 
+- to test my email secuirty I imported my flask app Message instance into my terminal session, from here 
+- I ran the command 
+flask shell
+>>> import jwt
+>>> token = jwt.encode({'a' : 'b'}, 'my-secret', algorithm='HS256')
+- Next I needed to print my token , I acheived this with the command
+>>> token
+b'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhIjoiYiJ9.dvOo58OBDHiuSHD4uW88nfJikhYAXc_sfUHq1mDi4G0'
+- [MyTestjwt](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/token_proof.PNG)
+- Next I needed to verify my token,  I acheived this the commands
+>>> jwt.decode(token, 'my-secret', algorithms=['HS256'])
+>>> {'a':'b'}
+- I then updated my models.py with my jwt decoding
+
+### jwt testing password & email recovery part2
+- to test my tokens I started a new flask shell session
+- I ran the command 
+flask shell
+>>> u = User.query.get(1)
+>>> u
+<User CliveNooNAnBCliveNooNAnBFRase>
+>>> u.get_reset_password_token()
+'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNldF9wYXNzd29yZCI6MSwiZXhwIjoxNTM3MjMwMzM2LjAxMTIyMjZ9.LqZvPtaWMXfH-ycjho3AtKbWPkHhUPe01f6V7xMDILU'
+>>> 
+- Verified 
+- <User CliveNooNAnBCliveNooNAnBFRase>
+- [MyTestjwtVerified](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/token_proof2.PNG)
+- Next task was to update my forms.py & my jinja templates
+
+### jwt testing password & email recovery part3
+- To test my newly created email & password recovery feature I started my debugging server once again with the command
+- python -m smtpd -n -c DebuggingServer localhost:8025
+- Next I went to my application which was running a in my cloud9 instance
+- On the main interface where a user logs in, the first page the user is greeted with I filled in the relevent details to recover my password
+- [MyTestjwtVerifiedPasswordRecoveryDearCoffe](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+- [MyTestjwtVerifiedPasswordRecovery](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
+
+
+
+ ## User Testing   
+
+
+##### USER1:
 gets wind of an awesome surfing website where he can buy surfboards,
 he finds the link thru soacial media & connects , he browses the site for a few minutes & decides he might make a purchase , he completes his purchase with out having to create an account
 Test1 User1 ( True/False )
 Was User1 able to complete his purchase with out having to create an account?
 True
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
 
 
-USER2:
+##### USER2:
 is just packing up from surfing for the day, when she hears an advert on the radio about an online surf shop , she clicks on ,after being in the water all day she fills in her details incorrectly, she tries again with all the correct details , but being in such a hurry , she never finishes the task , so she puts the phone down , when she arrives home , she brings her mobile with her , she puts it down , her daugther picks it up & begins exploring the website, she gets thru most of it & discovers the cart , she manages to get all the way with a pink surfboard she quite fancied, she gets to the stripe popup box, & recalls her dad working treiesly on something the exact same on his computer, she remembers what to do , she manages to remeber the test long password with the same numbers , then she remembers the easy one with 3 numbers , 
 
 She is then left with the calender, she does not qiute understand this type of calender, so she fills in what she knows and carrys on , she see,s the little box shake with disagreement & decides she better put it away
@@ -560,10 +521,12 @@ Falsh
 Was User2 daugther able to make a purchase when she filled in her details incorrectly?
 falsh
 RESULT 100%
+- [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+- [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
 
 
 
-USER3
+##### USER3:
 is coming home from work on the bus  he begins to shoulder surf another passengers laptop , as he admires the website he retrives his mobile from his pocket & reads the address, connects to the website, he attempts signing up for the first time , USER3 has only been using a mobile for a week he has spent most of his life on the beach, must be why his eyes are so good,
 he fills in his details with the first name & the last name as the same name,
 he then attempts to only enter in 6 characters in the passsword field, with an incorrect email address , 
@@ -579,31 +542,20 @@ Was User3 able to create an account when he filled in his details correctly?
 True
 RESULT 100%
 
+- [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+- [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
+
 ## Bugs
 
 ### Email
 ### Translations
 ### Notifications
 
-## Please edit configuration/connection/logging settings in '/home/ubuntu/workspace/migrations/alembic.ini'
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+#
 
  
 
-## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
 
 ## My Application looks amazingly responsive across all screen sizes this is mainly down to the Flask Framework & FlaskBootStrap 
 
@@ -654,20 +606,6 @@ For any scenarios that have not been automated, test the user stories manually a
   [github](https://github.com/90t/book-club) <------ THIS IS THE LIVE PROJECT FOLDER
 - heroku  https://git.heroku.com/book-of-hue.git 
 - origin  https://github.com/90t/book-club 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
 
 ##  style="background-image: url('{{ url_for('static', filename='img/g.jpeg') }}" "height: auto;" "max-width:100%"  "background-repeat: no-repeat;"  
 
@@ -720,8 +658,14 @@ For any scenarios that have not been automated, test the user stories manually a
 ## 
 ## Created Register.html with rer hashing method in conjunction flask-login & UserMixin
 ## 
-##  ?pybabel extract -F babel.cfg -k _l -o messages.pot .
-## pybabel extract -F babel.cfg -k _l -o messages.pot .?
+
+
+
+
+
+# This is the correct workflow
+## pybabel extract -F babel.cfg -k _l -o messages.pot .
+## pybabel extract -F babel.cfg -k _l -o messages.pot .
 ## Translation 
 ## 
 ##  pybabel init -i messages.pot -d app/translations -l es
@@ -741,85 +685,6 @@ For any scenarios that have not been automated, test the user stories manually a
 ## como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS_TRANSLATOR_KEY']})
 ## 
 ## r.status_code
-## 
-## 
-## 
-## 
-## 
-## 
-###### heroku 
-##
-##
-## (env) clivenoonan:~/workspace (master) $ heroku apps:create book-of-hue
-## Creating ⬢ book-of-hue... done
-## https://book-of-hue.herokuapp.com/ | https://git.heroku.com/book-of-hue.git
-pybabel extract -F babael.cfg -k _l -o messages.pot .
-/babel.cfg
-/home/ubuntu/workspace/(env) clivenoonan:~/workspace (master)
-## 
-##
-## Example
-## (env) clivenoonan:~/workspace (master) $ git remote -v
-## heroku  https://git.heroku.com/my-book-of-hue.git (fetch)
-## heroku  https://git.heroku.com/my-book-of-hue.git (push)
-## origin  https://github.com/90t/book-club.git (fetch)
-## origin  https://github.com/90t/book-club.git (push)
-## 
-## 
-## heroku addons:add heroku-postgresql:hobby-dev
-## Creating heroku-postgresql:hobby-dev on ⬢ book-of-hue... free
-## Database has been created and is available
-## 
-## Created postgresql-shaped-66481 as DATABASE_URL
-## 
-## heroku logs
-## 
-## 
-## 
-##
-##
-##<nav class="navbar" style="color:#666;" "font-family: "Source Sans Pro",Helvetica,sans-serif;">
-##
-
-## 
-##
-##
-##
-##
-##
-##
-##
-##
-
-## 
-##
-##
-##
-##
-##
-##
-##
-##
-
-## 
-##
-##
-##
-##
-##
-##
-##
-##
-
-## 
-##
-##
-##
-##
-##
-##
-##
-##
 
 
 
