@@ -5,9 +5,6 @@
 
 - EXPLAIN FOLLOWERS & SCHEMEA BETTER
 - USER TESTING, TRANSLATE_LINK, POSTS,  LOGIN , MESSAGING, MESSAGING TO & FROM MOBILE ON DIFFERENT NETWORKS
-- INSERT ALL PROOF IMAGES
-- SPELL CHECK
-- CUT UP TRANSLATIONS & IMPROVE
 
 # CodeNote flasks micro services
 
@@ -473,60 +470,117 @@ flask shell
 - He hasnt posted a note in a while, his popup profile box told him today, so he forgot what password he signed up with
 - When User1:David arrives home he decides to have a look at that data website, as he proceeds to login, he reliases he cant remeber his passsword
 - He selects the recover password option on the signinn page
+- After reseting his password he checks the main codepost page & sees that his coder buddy has left a codenote in spanish
+- He presses his translate button next to the post that coffe posted at 4:30,
+- When User1:David was about the private message User2:Coffe back, he noticed a code post & clicked on the users profile, after reading that the user is a coder
+- setting up his own coder dojo he decides to follow the user,
+- After reading the coder dojo entusiaists profile User1:David decides to update his profile to reflect his coding expierence
 ##### Test1 User1 ( True/False )
 ### Was User1 able to complete recieve a message form User2:Coffe?
 # True
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
-##### Test1 User1 ( True/False )
-### Was User1 able to complete recieve a message form User2:Coffe?
-# True
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
-##### Test1 User1 ( True/False )
-### Was User1 able to complete recieve a message form User2:Coffe?
-# True
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
-##### Test1 User1 ( True/False )
-### Was User1 able to complete recieve a message form User2:Coffe?
-# True
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
+ - [USER1Testingmessage](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
 
 
-##### UUser2:Coffe
-is just packing up from surfing for the day, when she hears an advert on the radio about an online surf shop , she clicks on ,after being in the water all day she fills in her details incorrectly, she tries again with all the correct details , but being in such a hurry , she never finishes the task , so she puts the phone down , when she arrives home , she brings her mobile with her , she puts it down , her daugther picks it up & begins exploring the website, she gets thru most of it & discovers the cart , she manages to get all the way with a pink surfboard she quite fancied, she gets to the stripe popup box, & recalls her dad working treiesly on something the exact same on his computer, she remembers what to do , she manages to remeber the test long password with the same numbers , then she remembers the easy one with 3 numbers , 
-
-She is then left with the calender, she does not qiute understand this type of calender, so she fills in what she knows and carrys on , she see,s the little box shake with disagreement & decides she better put it away
-
-Test1 User2 ( True/False )
-Was User2 able to create an account when she filled in her details incorrectly?
-Falsh
-Was User2 daugther able to make a purchase when she filled in her details incorrectly?
-##### Test1 User1 ( True/False )
-### Was User1 able to complete recieve a message form User2:Coffe?
-# True
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
 
 ##### Test1 User1 ( True/False )
-### Was User1 able to complete recieve a message form User2:Coffe?
+### Was User1 able to complete a codenote/post to his main profile home page
 # True
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
+ - [USER1Testingpost](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+
+
 
 ##### Test1 User1 ( True/False )
-### Was User1 able to complete recieve a message form User2:Coffe?
+### Was User1 able to complete a codenote/post to his main profile home page & did the codeNote/post
+### showup on both the homepage & the main codenote/post forum page
 # True
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
+ - [USER1TestingcodeNote/post](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+
+
+
 
 ##### Test1 User1 ( True/False )
-### Was User1 able to complete recieve a message form User2:Coffe?
+### Was User1 able to recover his forgotten password  & seetup another thru the use of email & hyperlink email in his email inbox?
+# Inconclusive
+ - [USER1Testingpassword](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ 
+
+
+
+##### Test1 User1 ( True/False )
+### Was User1 able to follow the dojo entusiaists profile ?
 # True
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
- - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
+ - [USER1Testingdojoentusiaists](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+
+
+##### Test1 User1 ( True/False )
+### Was User1 able to update his own profile ?
+# True
+ - [USER1Testingprofile](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+
+
+
+##### User2:Coffe
+- User2:Coffe is rushing on the way to the biggest presentation of her career mabey even her life, she hurtles off the bus fresh into the blanket rain,
+- In the mist of the panic she looses her wits & forgets about the rain, but more importantly, she forgets about the note book under her arm
+- when she finally grabs the door as she arrives in the doorway of her campus, the notebook sails to the ground, she thinks to herslef thank god that wasnt my
+- tablet, then I would of been up the creek & I havent had a paddle in years,
+- Then she felt the uneasy feeling of her menthors dissapionted glare, the tought of her dragging him away from his studys for some break thru, the cheek of
+- the girl , I mean she is a genius but , come on!
+- This feeling came form the soaked note pad glaring up at her like her menthor, 
+- The biggest break through of her career & she is sunked by the old faithfull Irish blanket rain,
+- next she see,s her menthor briskly striding towards her,
+- But wait she ponders for a flash & releises she posted her break thru to david in a private message, 
+- 000000000000.9th of a second later, her menthor asks her in very smirk voice , "Well Coffe, whats this break thru you have been annoying me about, you know
+- I was trying convince the board to let you..... " finishing his sentance would of beeen hard at this point with his jam firmly planted on the ground,
+- He gasps, " I cant believe it, you did it , you solved the formula"
+- mentor says to User2:Coffe, "All this time all I thought you were doing was drinking coffee, tell ya what send it on to me & while you at it get me the
+- name of that developer of that code/post application"
+- User2:Coffe replys " No problem, if you go to his profile page you can follow him & message him, I mean after all this Nasa"
+- mentor replys " & Coffe , well done I knew you had it in you"
+- User2:Coffe replys " gracious "
+
+
+##### Test1 User2:Coffe ( True/False )
+### Was User2:Coffe able to send a message to David?
+# True
+ - [User2:CoffeTestingmessage](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+
+
+
+##### Test1 User2:Coffe ( True/False )
+### Was User2:Coffe able to complete a codenote/post to her main profile home page
+# True
+ - [USER1Testingpost](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+
+
+
+##### Test1 User2:Coffe ( True/False )
+### Was User2:Coffe able to complete a codenote/post to his main profile home page & did the codeNote/post
+### showup on both the homepage & the main codenote/post forum page
+# True
+ - [USER1TestingcodeNote/post](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+
+
+
+
+##### Test1 User2:Coffe ( True/False )
+### Was User2:Coffe able to recover his forgotten password  & seetup another thru the use of email & hyperlink email in his email inbox?
+# Inconclusive
+ - [USER1Testingpassword](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ 
+
+
+
+##### Test1 User2:Coffe1 ( True/False )
+### Was User2:Coffe Menthor able to follow David thru ?
+# True
+ - [USER1Testingdojoentusiaists](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+
+
+##### Test1 User2:Coffe ( True/False )
+### Was User2:Coffe Menthor able to private message david ?
+# True
+ - [USER1Testingprofile](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
 
 
 
@@ -607,4 +661,3 @@ Tested On
   [github](https://github.com/90t/book-club) <------ THIS IS THE LIVE PROJECT FOLDER
 - heroku  https://git.heroku.com/book-of-hue.git 
 - origin  https://github.com/90t/book-club 
-
