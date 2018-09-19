@@ -1,18 +1,13 @@
 [![Build Status](https://travis-ci.org/90t/book-club.svg?branch=master)](https://travis-ci.org/90t/book-club)
-
-# JOBS STILL LEFT DO TO
-
-
-- EXPLAIN FOLLOWERS & SCHEMEA BETTER
-- USER TESTING, TRANSLATE_LINK, POSTS,  LOGIN , MESSAGING, MESSAGING TO & FROM MOBILE ON DIFFERENT NETWORKS
-
 # CodeNote flasks micro services
 
-The inspiration for this project came from studying python since 2016 before I attended IT & Maintenance in CoCC , this python class was of a night time in CoCC,
+### The inspiration for this project came from studying python since 2016 before I attended IT & Maintenance in CoCC , this python class was ### of a night time in CoCC,
 - Since then moving on to SoloLearn on my phone ,then Code institute with SoloLearn agian & then syllabus1_LMS1 & syllabus2_LMS2(cloud9)
 - At this stage I was really looking forward to building something real in web development with the flask framework I had heard so much about
-- Flasks Micro services was what I was really interested in , I was setting out to incorporate & learn microservices to speed up, improve, & build a website
-- that could match the mern stack , the mean stack, django , this how ever is a long term goal as I am very pleased on how far I was able to push the development
+- Flasks Micro services was what I was really interested in , I was setting out to incorporate & learn microservices to speed up, improve, &
+- build a website
+- that could match the mern stack , the mean stack, django , this how ever is a long term goal as I am very pleased on how far I was able to
+- push the development
 - of this website
 - I wanted to see if I could develop a messaging system without having to leave the flask eco system
 - Creating Database for users & Post & followers with SQLACHemy
@@ -29,7 +24,8 @@ The style of this website is very minimil, with a small bit of inline styling, t
 - the defualt styles from FlaskBootStrap, I also restyled the color of the navbar links , this had a massive effect on such a plain interface
 - Changing the mail notification icon was also a massive changer in the over all aesthetics of my application
 - When arriving on CodeNote you will be met with a sign in page where the user has the option of signing into the application
-- or registering a new account, the user also has the option of email recovery & a remember me checkbox, since this is the first page the user will see,
+- or registering a new account, the user also has the option of email recovery & a remember me checkbox, since this is the first page
+- the user will see,
 - Once the user has logged in, the user will be greeted with a message with there user name that they had just signed with
 - The main CodeNote/posts/forum/ page is accessible through the navbar with the link CodeNote,
 - The users mail, logout , profile , & search engine are also availible on this page  
@@ -38,7 +34,8 @@ The style of this website is very minimil, with a small bit of inline styling, t
 Once on this page the user has the abitly to go home to his own posts/notes page or the user can go staright to his profile page or
 - straight to his own mail page, 
 - This page the main page , is also the page with all the users ,here the user can select another user & view there profile
-- When hovering over a user name a popup box will appear with details about the user such as There user name , there most recent Post/CodeNote, & 
+- When hovering over a user name a popup box will appear with details about the user such as There user name , there most recent
+-  Post/CodeNote, & 
 - the last time there were seen aswell as the date & year
 - Also in this pop up box users can observe how many followers a user has & how many there are following
 - The pop up box is also interactive, a user can select a user name & be transported to there profile page or a users profile page 
@@ -65,14 +62,17 @@ The setup for this project was similer Django but with slight variations
 - Then I ran the command sudo pip install virtualenv, this installed the virtualenv that comes bundled with the ubuntu server
 - Next I created my venv with virtualenv -p python3 env <<<-----name of virtual enviroment
 - My next task was to activate the virtualenv with  clivenoonan:~/workspace $ source env/bin/activate
-- Since I had the majority of my project already built on a different ubuntu cloud workspace server, I copy & pasted my requirements.txt file into my new project
+- Since I had the majority of my project already built on a different ubuntu cloud workspace server, I copy & pasted my requirements.txt
+- file into my new project
 - Next I ran the command pip freeze  -r requirements.txt
 - Also pip install --upgrade -r requirements.txt, this updated & synced my packages to my project folder
 - Finally I started my development folder, with the command env/bin/flask run --host=0.0.0.0 --port=8080
-- After settting my env vars in heroku , when evr I neede to workon my project after I set the vars , I would have to run export FLASK_APP=blog.py
+- After settting my env vars in heroku , when evr I neede to workon my project after I set the vars , I would have to run export
+- FLASK_APP=blog.py
 - If I wanted to workon my project with debug mode on I would run the command  export FLASK_DEBUG=1 <<---ON
 - To turn debug off for deployment I would run the command export FLASK_DEBUG=0 <<-- OFF
-- To run my local debug built in email server I would run the command python -m smtpd -n -c DebuggingServer localhost:8025 in a new terminal, with my bash
+- To run my local debug built in email server I would run the command python -m smtpd -n -c DebuggingServer localhost:8025 in a new terminal,
+- with my bash
 - terminal also running
 
 
@@ -80,8 +80,10 @@ The setup for this project was similer Django but with slight variations
 ## Features
 
 ## BluePrints 
-- blueprints are a brillant feature to the flask framework, a good example of this is this project , I fully indented to build my project with a
-- blueprint structure , for large apllications, even tho this is only a meduim to a small appllication, blueprints had a massive effect on the organisation
+- blueprints are a brillant feature to the flask framework, a good example of this is this project , I fully indented to build my
+- project with a
+- blueprint structure , for large apllications, even tho this is only a meduim to a small appllication, blueprints had a massive effect
+- on the organisation
 - of my project
 - In Order to acheieve this I created a main / auth/ errors BluePrints inside of my app folder
 - I then registered my BluePrints in my __init package files
@@ -116,7 +118,8 @@ The setup for this project was similer Django but with slight variations
 - with the command pip install flask-babel
 - I then again imported flask-babel package from flask & created an instance with an application as an argument in my mother __init_.py
 - Next was to update my config.py to support my applications langauge prefrences
-- In order to use my flask babel package I first needed to create a babel.cfg file with my jinja templates & python paths programmed to parse
+- In order to use my flask babel package I first needed to create a babel.cfg file with my jinja templates & python paths programmed
+-  to parse
 - My next command was to extract my languages with the command pybabel extract -F babael.cfg -k _l -o messages.pot 
 - POT or otherwise known as portable object template
 - To compile my this file to a format so babel can compile at runtime
@@ -181,15 +184,25 @@ The setup for this project was similer Django but with slight variations
 - to manage & observe my database
 - to populate my tables in my database I worked in the python interactive shell , I entered this shell with the command
 - python
-- I also used flask shell , this eliminated the need to import my instance into my python shell everytime I wanted to manage my database I entered this
-- flask shell with the command flask shell
+- I also used flask shell , this eliminated the need to import my instance into my python shell everytime I wanted to manage my database
+- I entered my flask shell with the command flask shell
+
+### Followers & Posts Schema 
+- The Schemas in my application are a one to many relationship
+- With post ownership representing my one to many relationship
+- My one to many relationship is modeled so one user can write multiple posts
+- The follower Schema in my application is a many to many relationship
+- This is why my followers table is the most complex
+- With A follower user following many users aswell been followed by many users
+- So I have many to many relatonships managed by ORM
 
 
 
 ### Followers
 - To implement this feature in my project I needed to create my followers table in my modles.py
 - Which will be mapped & managed with my ORM
-- to create my first migration I used to command flask db migrate -m "just like git commit messsage ", just like git a message can be included in your migration
+- to create my first migration I used to command flask db migrate -m "just like git commit messsage ", just like git a message can be
+- included in my migration
 - for the changes in my project models to take effect to my database, I needed to run a upgrade command,
 - flask db upgrade became a part of my migration workflow
 - I then worked with the commands 
@@ -475,47 +488,52 @@ flask shell
 - When User1:David was about the private message User2:Coffe back, he noticed a code post & clicked on the users profile, after reading that the user is a coder
 - setting up his own coder dojo he decides to follow the user,
 - After reading the coder dojo entusiaists profile User1:David decides to update his profile to reflect his coding expierence
-##### Test1 User1 ( True/False )
-### Was User1 able to complete recieve a message form User2:Coffe?
+
+##### Test1 User1:David ( True/False )
+### Was User1:David able to recieve a message form User2:Coffe?
 # True
- - [USER1Testingmessage](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+- [USER1Testingmessage](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/messagingDavid/DavidWithOneMessagereplyFromCoffe.PNG)
 
-
-
-##### Test1 User1 ( True/False )
-### Was User1 able to complete a codenote/post to his main profile home page
+##### Test1 User1:David ( True/False )
+### Was User1:David able to send a message to User2:Coffe?
 # True
- - [USER1Testingpost](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+- [USER1Testingmessage](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/messagingDavid/DavidWthMultipleMessageInboxFromCoffe.PNG)
+
+
+##### Test1 User1:David ( True/False )
+### Was User1:David able to complete a codenote/post to his main profile home page
+# True
+ - [USER1Testingpost](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/messagingDavid/DavidWthMultipleMessageInboxFromCoffe.PNG)
 
 
 
-##### Test1 User1 ( True/False )
-### Was User1 able to complete a codenote/post to his main profile home page & did the codeNote/post
+##### Test1 User1:David ( True/False )
+### Was User1:David able to complete a codenote/post to his main profile home page & did the codeNote/post
 ### showup on both the homepage & the main codenote/post forum page
 # True
- - [USER1TestingcodeNote/post](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1TestingcodeNote/post](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/messagingDavid/DavidsPostMainPage.PNG)
 
 
 
 
-##### Test1 User1 ( True/False )
-### Was User1 able to recover his forgotten password  & seetup another thru the use of email & hyperlink email in his email inbox?
+##### Test1 User1:David ( True/False )
+### Was User1:David able to recover his forgotten password  & setup another thru the use of email & hyperlink email in his email inbox?
 # Inconclusive
- - [USER1Testingpassword](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1Testinghyperlinkemail](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
  
 
 
 
-##### Test1 User1 ( True/False )
-### Was User1 able to follow the dojo entusiaists profile ?
+##### Test1 User1:David ( True/False )
+### Was User1:David able to follow the dojo entusiaists(mark) profile ?
 # True
- - [USER1Testingdojoentusiaists](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+- [USER1Testingmark](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/messagingDavid/DavidViewingMarksProfileFollowingButNotSentMessage.PNG)
 
 
-##### Test1 User1 ( True/False )
-### Was User1 able to update his own profile ?
-# True
- - [USER1Testingprofile](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+##### Test1 User1:David ( True/False )
+### Was User1:David Succesfull In His search ?
+# Falsh
+ - [USER1Testingprofilesearch](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
 
 
 
@@ -540,17 +558,29 @@ flask shell
 - User2:Coffe replys " gracious "
 
 
+
 ##### Test1 User2:Coffe ( True/False )
-### Was User2:Coffe able to send a message to David?
+### Was User2:Coffe able to recieve a message form User1:David?
 # True
- - [User2:CoffeTestingmessage](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+- [USER1Testingmessage](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/messagingDavid/DavidWthMultipleMessageInboxFromCoffe.PNG)
+
+
+##### Test1 User2:Coffe ( True/False )
+### Was User2:Coffe able to send a message to User1:David?
+# True
+- [USER1Testingmessage](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/messagingDavid/DavidWithOneMessagereplyFromCoffe.PNG)
+
+##### Test1 User2:Coffe ( True/False )
+### Did User2:Coffe badges & message number ount on there main page 
+# True
+[USER1Testingprofile](Linkhttps://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/messagingCoffe/UserTestingShowingCoffe%26DavidsProfile%26MessagesBadgesCoffesInboxWithMessagesFormDavids.PNG)
 
 
 
 ##### Test1 User2:Coffe ( True/False )
 ### Was User2:Coffe able to complete a codenote/post to her main profile home page
 # True
- - [USER1Testingpost](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
+ - [USER1Testingpost](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/messagingCoffe/CoffeWithOnePostToMainPage.PNG)
 
 
 
@@ -558,30 +588,7 @@ flask shell
 ### Was User2:Coffe able to complete a codenote/post to his main profile home page & did the codeNote/post
 ### showup on both the homepage & the main codenote/post forum page
 # True
- - [USER1TestingcodeNote/post](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
-
-
-
-
-##### Test1 User2:Coffe ( True/False )
-### Was User2:Coffe able to recover his forgotten password  & seetup another thru the use of email & hyperlink email in his email inbox?
-# Inconclusive
- - [USER1Testingpassword](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
- 
-
-
-
-##### Test1 User2:Coffe1 ( True/False )
-### Was User2:Coffe Menthor able to follow David thru ?
-# True
- - [USER1Testingdojoentusiaists](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
-
-
-##### Test1 User2:Coffe ( True/False )
-### Was User2:Coffe Menthor able to private message david ?
-# True
- - [USER1Testingprofile](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
-
+ - [USER1TestingcodeNote/post](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/messagingCoffe/CoffeWithOneProfileToMainPageMoment.Js.PNG)
 
 
 
@@ -607,12 +614,16 @@ Tested On
 
 ## Bugs
 
-### Email
-### Translations
-### Notifications
+##### Email
+
+##### Translations
+
+##### redis
+
+##### ElasticSearch
 
 
-## My Application looks amazingly responsive across all screen sizes this is mainly down to the Flask Framework & FlaskBootStrap 
+## My Application looks amazingly responsive across all screen sizes this is mainly down to the Flask Framework & FlaskBootStrap
 
 
 
@@ -659,5 +670,57 @@ Tested On
 
 - The  project folder lives at this address
   [github](https://github.com/90t/book-club) <------ THIS IS THE LIVE PROJECT FOLDER
-- heroku  https://git.heroku.com/book-of-hue.git 
-- origin  https://github.com/90t/book-club 
+- [heroku](https://git.heroku.com/book-of-hue.git) 
+- [origin](https://github.com/90t/book-club)
+
+- I added my env vars in the heroku cloud managment console in the settings section,
+- which were my api key & my CLARAFIAI_API variable
+- I created a viarible named CLARAFIAI_API in my backend project this connected my application to heroku 
+
+
+
+# It is very easy to download install & run this project directly,
+# first you need to make sure you have Node.js installed on your computer
+# once you have eistablished you have a version number you are good to go
+# you then will have to git clone both of my repo,s
+# once cloned you have to run npm install
+# in both projects you will have to make sure you have your own directory setup for both different projects, 
+# you need to be in the diretory which you cloned into, where your package.json is located
+# after this you will have your pgAdmin installed on you computer & setup,
+# Then you have to make the nessacary changes to suit you needs,
+# as in your pgadmin creds
+# you could also use a differnet rational database
+
+
+
+## Credits
+StackOverFlow
+
+### Content
+- The text for just a small bit of the tech  discription was copied from the [Wikipedia](https://en.wikipedia.org/)
+
+### Media
+- The photos used in this site were obtained from PixelBay
+
+### Acknowledgements
+##### I didn't base my work off other code, I used only what I had learnt in syllabuss1/LMS1 & syllabuss2/LMS2(cloud-9) &
+- [Node.js](https://reactjs.org/)
+    - Documentation.
+
+- [Esxprss.js](https://reactjs.org/)
+    - Documentation.
+
+- [React.js](https://reactjs.org/)
+    - Documentation.
+
+- [PGAdmin3](https://www.pgadmin.org/)
+    - Documentation.
+
+- [Postgres](https://www.postgresql.org/)
+    - Documentation.
+
+- [clarifaiAPI](https://clarifai.com/)
+    - Documentation.
+
+##### 10/09/2018 This is Clive Noonan , Code Initstute , Project Number3, Signing Off......
+
