@@ -189,14 +189,13 @@ The setup for this project was similer Django but with slight variations
 - I then worked with the commands 
 
 #### Migrate Workflow
-## git add .
-## git commit -m "Trying to flush out posts problem"
-## git push origin master
-## flask db migrate
-## flask db upgrade
-## flask db downgrade
-## flask db current 
-## flask db history 
+##### git add .
+##### git commit -m "Trying to flush out posts problem"
+##### git push origin master
+##### flask db upgrade
+##### flask db downgrade
+##### flask db current 
+##### flask db history 
 - to manage & observe my database
 - to populate my tables in my database I worked in the python interactive shell , I entered this shell with the command
 - python
@@ -370,29 +369,7 @@ The setup for this project was similer Django but with slight variations
 
 ## Testing
 
-
-##### I ran all my files through a validation test using
-##### Passing 100%
-- [W3C](https://validator.w3.org/) for HTML.
-- [W3C](https://jigsaw.w3.org/css-validator/) for CSS.
-- [JS Hint](http://jshint.com/) for JavaScript.
-- [TravisCI](https://travis-ci.org/) for Continues testing tests passing on github
-
-
-Tested On   
-- Chrome. 
-- Internet Explorer.
-- Microsoft Edge.
-- Firefox. 
-- Opera.
-- Continous design Testing SonyXsperia Mobile Phone 
-- Continous design Testing Windows10XL Mobile Phone 
-- Continous design Testing 42 Inch sharpSmart Led TV
-- All Browsers & Mobile devices Display the whole site as was intended 
-- [LightHouse](https://chrome.google.com/webstore/category/extensions) 
-
-
-## Testing ## Translations Testing
+## Translations Testing
 - To test my API Key
 - I first needed to assocaite my application with my MS_TRANSLATOR_KEY
 - I achieved this by exporting another Enviroment Variable
@@ -402,7 +379,6 @@ Tested On
 - Flask Shell was next to test my api in my terminal
 - I achieved this with the command flask shell
 - My earlier installation of the python package requests will now come in to play in my apllication with a get request to microssoft for api validation
-- After my testing was complete I updated my routes to reflect my changes, my translate route
 
 ## Translations Testing In My Terminal
 - First I needed obtain my microsoft url in my portal documentation
@@ -420,7 +396,7 @@ como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS
  >>> r.status_code
  - This was because I stored my request in my r variable
  200
- - the final task was check my contene to verify the translation was succesfull
+ - the final task was check my contend to verify the translation was succesfull
  - I did this with r.content command in my python flask shell
  >>> r.content
  b'\xef\xbb\xbf"Hi, how are you?"'
@@ -443,16 +419,15 @@ flask shell
 >>> msg.html = '<h1>HTML body<h1/>'
 >>> mail.send(msg)
 - [MyTestEmail](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/email_proof.PNG)
-- The project uses **BootStrap4** to assist the Developer with a built in css library79376504
-- aswell as reusable components
 - I then updated my email.py methods & my jinja templates 
 - next was to update my routes
+- After my testing was complete I updated my routes to reflect my changes, my translate route
 
 
 ### jwt
 - To use tokens in my emails I needed to base my structure on the Jason web token specification
 - With this method I could create secure tokens that connot be forged according to jwt standards
-- These jwt tokens are crypyographically signed , according to jwt standards, tamering with the data that jwt handles
+- These jwt tokens are crypyographically signed , according to jwt standards, tampering with the data that jwt handles the data renders
 - this signature invaid , this inturn rejects the token
 - This whole process is controlled by the famous algorithm='HS256')
 - With this package I generated hash tokens
@@ -545,16 +520,33 @@ RESULT 100%
 - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recoveryDearCoffe.PNG)
 - [USER1Testing](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/password_recovery.PNG)
 
+
+
+##### I ran all my files through a validation test using
+##### Passing 100%
+- [W3C](https://validator.w3.org/) for HTML.
+- [W3C](https://jigsaw.w3.org/css-validator/) for CSS.
+- [JS Hint](http://jshint.com/) for JavaScript.
+- [TravisCI](https://travis-ci.org/) for Continues testing tests passing on github
+
+
+Tested On   
+- Chrome. 
+- Internet Explorer.
+- Microsoft Edge.
+- Firefox. 
+- Opera.
+- Continous design Testing SonyXsperia Mobile Phone 
+- Continous design Testing Windows10XL Mobile Phone 
+- Continous design Testing 42 Inch sharpSmart Led TV
+- All Browsers & Mobile devices Display the whole site as was intended 
+- [LightHouse](https://chrome.google.com/webstore/category/extensions) 
+
 ## Bugs
 
 ### Email
 ### Translations
 ### Notifications
-
-#
-
- 
-
 
 
 ## My Application looks amazingly responsive across all screen sizes this is mainly down to the Flask Framework & FlaskBootStrap 
@@ -607,7 +599,7 @@ RESULT 100%
 - heroku  https://git.heroku.com/book-of-hue.git 
 - origin  https://github.com/90t/book-club 
 
-##  style="background-image: url('{{ url_for('static', filename='img/g.jpeg') }}" "height: auto;" "max-width:100%"  "background-repeat: no-repeat;"  
+######  style="background-image: url('{{ url_for('static', filename='img/g.jpeg') }}" "height: auto;" "max-width:100%"  "background-repeat: no-repeat;"  
 
 
 
