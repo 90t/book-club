@@ -52,3 +52,5 @@ jinja2.exceptions.TemplateNotFound: bootstrap_cdn/base.html
 2018-09-18 21:24:54,876 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
 2018-09-18 21:32:47,183 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
 2018-09-18 21:33:25,891 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-09-19 02:28:14,786 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
+2018-09-19 02:28:26,132 INFO: CodeNote startup [in /home/ubuntu/workspace/app/__init__.py:79]
