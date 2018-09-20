@@ -445,6 +445,7 @@ flask shell
 - Verified 
 - <User CliveNooNAnBCliveNooNAnBFRase>
 - [MyTestjwtVerified](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Tokens/token_proof2.PNG)
+
 - Next task was to update my forms.py & my jinja templates
 
 ### jwt testing password & email recovery part3
@@ -473,7 +474,7 @@ flask shell
 - He hasnt posted a note in a while, his popup profile box told him today, so he forgot what password he signed up with
 - When User1:David arrives home he decides to have a look at that data website, as he proceeds to login, he reliases he cant remeber his passsword
 - He selects the recover password option on the signinn page
-- After resetting his password he checks the main codepost page & sees that his coder buddy has left a codenote in spanish
+- After reseting his password he checks the main codepost page & sees that his coder buddy has left a codenote in spanish
 - He presses his translate button next to the post that coffe posted at 4:30,
 - When User1:David was about the private message User2:Coffe back, he noticed a code post & clicked on the users profile, after reading that the user is a coder
 - setting up his own coder dojo he decides to follow the user,
@@ -665,7 +666,7 @@ Tested On
 ## My Live Practical Python Project CodeNote can be viewed fully deployed on heroku [here](http://my-book-of-hue.herokuapp.com/)
 ## My Application looks amazingly responsive across all screen sizes this is mainly down to the Flask Framework & FlaskBootStrap
 
-### VERSION CONTROL
+## VERSION CONTROL
 
 - The  project folder lives at this address
   [github](https://github.com/90t/book-club) <------ THIS IS THE LIVE PROJECT FOLDER
@@ -673,19 +674,27 @@ Tested On
 - [origin](https://github.com/90t/book-club)
 
 
-##### It is very easy to download install & run this project directly,
-##### first you need to make sure you have Node.js installed on your computer
-##### once you have eistablished you have a version number you are good to go
-##### you then will have to git clone both of my repo,s
-##### once cloned you have to run npm install
-##### in both projects you will have to make sure you have your own directory setup for both different projects, 
-##### you need to be in the diretory which you cloned into, where your package.json is located
-##### after this you will have your pgAdmin installed on you computer & setup,
-##### Then you have to make the nessacary changes to suit you needs,
-##### as in your pgadmin creds
-##### you could also use a differnet rational database
 
-
+## How to set up this project Locally or on cloud nine
+- If you want to setup this project on cloud 9 you can clone this repo & follow the setup instructions in the beginning of this file for cloud9
+- If you get stuck leave a codenote on my website, or you can private message me, & I will gladly help you out
+- If you dont have cloud9, then there is number of steps you will have to take in order to get this application from your workspace into your server
+- flask & python environment,
+- first you will have to have python3 installed on your pc/laptop/machine/computer
+- next you will need git installed on your pc/laptop/machine/computer to clone my workspace from github
+- next up you will have setup your venv . there are numerous workflows to guide you on this topic
+- The reason I am not providing a more broader explanation on how exaclty how to do it is
+- You will 100% find your own workflow, wheather it with the pip installer, the pip wrapper
+- You will soon become a custom to creating venv,s in seconds
+- Always use venv,s in your python projects not just flask
+- For the sake of going through the task of mastering the workflow, it will be way more worth than your time
+- It will save you endless hours of debugging & confusion to why your packages are conflicting with each other,
+- This will happen if you just run , test , serve python projects in your workspace !without a venv
+- Learning to setup a venv from & inside your terminal is essenital, which ever it maybe,
+- The reason for this is , pycharm maybe amazing, but it also costs
+- So when your pycharm subscription runs out, you wont be stuck not knowing how to correctly setup a venv in a fast & effecient manner
+- If you are stuck you can check the resources I used to develop this application & they will get you setup in no time
+- If you get stuck leave a codenote on my website, or you can private message me, & I will gladly help you out
 
 ## Credits
 StackOverFlow
@@ -694,16 +703,20 @@ StackOverFlow
 - I wrote all the content
 
 ### Media
-- There are no images in this website
+- There no images in this website
 
 ### Acknowledgements
 ##### I didn't base my work off other code, I used only what I had learnt in syllabuss1/LMS1 & syllabuss2/LMS2(cloud-9) &
 - [www.fullstackpython.com](https://www.fullstackpython.com/flask.html) 
-- - [flask.pocoo.org](http://flask.pocoo.org/docs/1.0/quickstart/) 
-- - [opensource](https://opensource.com/article/18/4/flask) 
-- - [www.digitalocean.com](https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications) 
-- - [www.ntu.edu.sg](http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/Python3_Flask.html)
+- [flask.pocoo.org](http://flask.pocoo.org/docs/1.0/quickstart/) 
+- [opensource](https://opensource.com/article/18/4/flask) 
+- [www.digitalocean.com](https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications) 
+- [www.ntu.edu.sg](http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/Python3_Flask.html)
 
 
 
-##### 19/09/2018 This is Clive Noonan , Code Initstute , Project Number4, Signing Off......
+
+https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications
+http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/Python3_Flask.html
+
+##### 19/09/2018 This is Clive Noonan , Code Institute , Practical-Python: Project Number4, Signing Off......
