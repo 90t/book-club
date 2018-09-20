@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/90t/book-club.svg?branch=master)](https://travis-ci.org/90t/book-club)
 # CodeNote flasks micro services
-
-#### The inspiration for this project came from studying python since 2016 before I attended IT & Maintenance in CoCC ,
+### The inspiration for this project came from studying python since 2016 before I attended IT & Maintenance in CoCC ,
 #### this python class was of a night time in CoCC,
 - Since then moving on to SoloLearn on my phone ,then Code institute with SoloLearn agian & then syllabus1_LMS1 & syllabus2_LMS2(cloud9)
 - At this stage I was really looking forward to building something real in web development with the flask framework I had heard so much about
@@ -81,11 +80,11 @@ The setup for this project was similer Django but with slight variations
 ## BluePrints 
 - blueprints are a brillant feature to the flask framework, a good example of this is this project , I fully indented to build my
 - project with a
-- blueprint structure , for large apllications, even tho this is only a meduim to a small appllication, blueprints had a massive effect
+- blueprint structure , for large applications, even tho this is only a meduim to a small application, blueprints had a massive effect
 - on the organisation
 - of my project
-- In Order to acheieve this I created a main / auth/ errors BluePrints inside of my app folder
-- I then registered my BluePrints in my __init package files
+- In Order to achieve this I created a main / auth/ errors BluePrints inside of my app folder
+- I then registered my BluePrints in my __init package file
 - This is similer to Django each BluePrint is like there own app 
 
 ## Enviroment Variables
@@ -311,12 +310,6 @@ The setup for this project was similer Django but with slight variations
 
 
 
-
-
-
-
-
-
 ## Micro Services
 
 - [FlaskBootStrap](https://https://getbootstrap.com/)
@@ -365,6 +358,15 @@ The setup for this project was similer Django but with slight variations
 - I achieved this with the command flask shell
 - My earlier installation of the python package requests will now come in to play in my apllication with a get request to microssoft for api validation
 
+
+
+
+
+
+
+
+
+
 ## Translations Testing In My Terminal
 - First I needed obtain my microsoft url in my portal documentation
 - In my terminal with my python flask shell active I first ran the config command form microsoft
@@ -391,6 +393,14 @@ como estas?&from=es&to=en', headers={'Ocp-Apim-Subscription-key': app.config['MS
  - [TranslationsTestingInMyTerminalScreenShot](https://s3-eu-west-1.amazonaws.com/codenote-proof-screenshots/Translations/translator_api_proof2.PNG) 
 
 
+
+
+
+
+
+
+
+
  ## Testing
  ### jwt testing 
 - To test my email in my terminal instance with my jwts 
@@ -407,6 +417,11 @@ flask shell
 - I then updated my email.py methods & my jinja templates 
 - next was to update my routes
 - After my testing was complete I updated my routes to reflect my changes, my translate route
+
+
+
+
+
 
 
 ### jwt
@@ -431,6 +446,12 @@ b'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhIjoiYiJ9.dvOo58OBDHiuSHD4uW88nfJikhYA
 >>> jwt.decode(token, 'my-secret', algorithms=['HS256'])
 >>> {'a':'b'}
 - I then updated my models.py with my jwt decoding
+
+
+
+
+
+
 
 ### jwt testing password & email recovery part2
 - to test my tokens I started a new flask shell session
@@ -528,6 +549,11 @@ flask shell
 
 
 
+
+
+
+
+
 ##### User2:Coffe
 - User2:Coffe is rushing on the way to the biggest presentation of her career mabey even her life, she hurtles off the bus fresh into the blanket rain,
 - In the mist of the panic she looses her wits & forgets about the rain, but more importantly, she forgets about the note book under her arm
@@ -614,7 +640,7 @@ Tested On
 ##### Translations
 - The transaltions feature of this application, was by far the most difficult work flow tp master
 - I am convinced to problem lies in my compileing of my ready made spanish messages.pot file  
-- I will be lookig to this bug & when I have it resolved I will updaet this bug notice
+- I will be looking to this bug & when I have it resolved I will update this bug notice
 
 
 ##### redis
@@ -635,8 +661,8 @@ Tested On
 - My Next task was to create an app with a unique name from the HerokuCLI with the command heroku apps:create 
 - With my new app created I recieved my new heroku git address/url 
 - I clarafied my new remote address with the command git remote -v 
-- To clarafay my app creation I checked my heroku cloud managment console once satisfied I proceeded 
-- Herokus ephemeral file system dictates that the file storage is not permanant, because of this I used the technuigue of provisioning a postgres database on my
+- To clarafai my app creation I checked my heroku cloud managment console once satisfied I proceeded 
+- Heroku,s ephemeral file system dictates that the file storage is not permanant, because of this I used the technuigue of provisioning a postgres database on my
 - heroku platform
 - I achieved this with the HerokuCLI by running the command heroku addons:add heroku-postgresql:hobby-dev , this gives me the free thier , the excate same as
 - creating from the heroku cloud managment console
@@ -645,12 +671,12 @@ Tested On
 
 ## Deployment Stage2
 
-- Next task in deployment was to update my requirements.txt with the package psyscop2 & gunicorn, heroku needs these packages to
+- Next task in deployment was to update my requirements.txt with the package psyscop2 & gunicorn
 - psyscop2 is the postgres database driver sql depands on this driver when you connect to a postgres database with heroku as the hosting platform
 - I also added gunicorn , this package is required to connect to heroku server,
-- next I needed to freeze my requirements to make sure all my packages are updated 
-- Procfile was next up , I created this file in  the top level of my project the folder on cloud9 & then added the relevent values to tell heroku
-- Then I created a Procfile , to establish with heroku what type of app is being served ,
+- next I needed to freeze my requirements to make sure all my packages are updated & in sync
+- Procfile was next up , I created this file in the top level of my project folder on cloud9 & then added the relevent values to tell heroku
+- what type of app is being served
 - in my Procfile I made the necessary configerations of web: flask db upgrade; flask translate compile; gunicorn blog:app
 - I then used the herokCLI to set my env variable with the command heroku config:set FLASK_APP=blog.py
 - With this command this env variable, will exist in heroku in side the application env
@@ -675,14 +701,14 @@ Tested On
 
 
 
-## How to set up this project Locally or on cloud nine
+## How to set up this project Locally or on cloud9
 - If you want to setup this project on cloud 9 you can clone this repo & follow the setup instructions in the beginning of this file for cloud9
 - If you get stuck leave a codenote on my website, or you can private message me, & I will gladly help you out
 - If you dont have cloud9, then there is number of steps you will have to take in order to get this application from your workspace into your server
 - flask & python environment,
 - first you will have to have python3 installed on your pc/laptop/machine/computer
 - next you will need git installed on your pc/laptop/machine/computer to clone my workspace from github
-- next up you will have setup your venv . there are numerous workflows to guide you on this topic
+- next up you will have setup your venv, there are numerous workflows to guide you on this topic
 - The reason I am not providing a more broader explanation on how exaclty how to do it is
 - You will 100% find your own workflow, wheather it with the pip installer, the pip wrapper
 - You will soon become a custom to creating venv,s in seconds
@@ -695,6 +721,9 @@ Tested On
 - So when your pycharm subscription runs out, you wont be stuck not knowing how to correctly setup a venv in a fast & effecient manner
 - If you are stuck you can check the resources I used to develop this application & they will get you setup in no time
 - If you get stuck leave a codenote on my website, or you can private message me, & I will gladly help you out
+
+
+
 
 ## Credits
 StackOverFlow
@@ -713,10 +742,4 @@ StackOverFlow
 - [www.digitalocean.com](https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications) 
 - [www.ntu.edu.sg](http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/Python3_Flask.html)
 
-
-
-
-https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications
-http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/Python3_Flask.html
-
-##### 19/09/2018 This is Clive Noonan , Code Institute , Practical-Python: Project Number4, Signing Off......
+##### 19/09/2018 This is Clive Noonan , Code Initstute , Project Number4, Signing Off......
